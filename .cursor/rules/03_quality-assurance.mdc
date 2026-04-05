@@ -1,0 +1,44 @@
+---
+description: Quality assurance standards for code and notebooks
+globs: *.py, *.ipynb
+---
+# Quality Assurance
+
+## Code Quality Checklist
+
+### Python Scripts (`src/`)
+- [ ] Follows PEP 8 style guide.
+- [ ] Type hints used for function arguments and return types.
+- [ ] Docstrings included for all functions and classes.
+- [ ] No hardcoded paths (use `pathlib` or relative paths).
+
+### Jupyter Notebooks (`weeks/weekN/04_notebook.ipynb`)
+- [ ] **Kernel Restart & Run All** passes without errors.
+- [ ] **Conceptual flow** aligns with week policy: Context → Data setup → Cleaning/transformation → Validation → Reflection (see [09_week-companion-architecture.mdc](./09_week-companion-architecture.mdc)).
+- [ ] Titles/headings match the same **week + topic slug** family as the **other six** learning layers (seven total).
+- [ ] No hidden state (variables defined in deleted cells).
+- [ ] Markdown cells clearly explain the steps.
+- [ ] Visualizations have titles, labels, and legends.
+
+## Data Validation
+- [ ] Check for missing values in datasets.
+- [ ] Verify assumptions before applying transformations or analyses.
+
+## Content Review Checklist (Zero-Copy)
+- [ ] **Originality Check**: Verify that text is not a direct copy from source material.
+- [ ] **Synthesis**: Ensure content represents a synthesized understanding, not just rephrasing.
+- [ ] **Citations**: Check that definitions and specific claims are cited.
+
+## Week companion parity (seven layers, this repo)
+
+When changing any week’s content, verify:
+
+- [ ] **Naming gate**: `XX_` + shared `<slug>` + correct suffix per layer ([07_file-naming-conventions.mdc](./07_file-naming-conventions.mdc)).
+- [ ] **Parity gate**: All **seven** layers exist for that week (or documented WIP / transitional backlog per rule `09`).
+- [ ] **Link gate**: Cross-links between the seven files for that week still resolve after edits.
+
+## Documentation Quality
+- README.md must match actual implementation.
+- Usage guides must be accurate.
+- Code comments explain complex logic and concepts (Code Comments Philosophy).
+- Formulas or key steps correctly formatted (LaTeX in notebooks where relevant).

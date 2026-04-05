@@ -1,0 +1,68 @@
+---
+description: Key guidelines extracted from copilot-instructions.md for AI assistants
+globs: *
+---
+# Copilot Instructions Extract
+
+**Source**: `.github/copilot-instructions.md` (v1.8) — the **canonical** reference for all AI assistants in this repository. This file provides a concise summary; when in doubt, defer to the source.
+
+---
+
+## Repository Context
+
+**Data Preprocessing** — academic workspace for data cleaning, transformation, and pipeline concepts (M.Sc. DSAI). Not a web application. Not a production system.
+
+**Owner**: Swamy PKV (M.Sc. Data Science & AI).
+
+---
+
+## Seven-layer week companion architecture (this repo only)
+
+**Full contract**: [09_week-companion-architecture.mdc](./09_week-companion-architecture.mdc)
+**Naming patterns**: [07_file-naming-conventions.mdc](./07_file-naming-conventions.mdc)
+
+For each **week in the repo**, maintain **seven** companion files in `weeks/weekN/`:
+
+1. `01_reading-notes.md` — theory (first-person learning journey voice)
+2. `02_examples.md` — worked examples (original scenarios)
+3. `03_quiz.md` — self-assessment (original synthesis only)
+4. `04_notebook.ipynb` — hands-on experiments
+5. `05_model-paper.md` — exam-style readiness
+6. `06_discussion.md` — reflection / forum prompts
+7. `07_assignment.md` — structured weekly deliverables
+
+**Weeks on demand** — only add files for weeks you are building. All eight weeks (1–8) are fully migrated to `weeks/week1/` through `weeks/week8/`.
+
+**Learning flow**: theory → examples → quiz → notebook → model paper → discussion prompt → assignment.
+
+---
+
+## Key policies (summary)
+
+| Policy | Details | Full reference |
+|--------|---------|----------------|
+| **Zero-copy** | Original synthesis only; no copy-paste from textbooks/institution samples | [01_educational-content-rules.mdc](./01_educational-content-rules.mdc) |
+| **Source material** | Internal, read-only, never reference in public docs | [06_source_material_rules.mdc](./06_source_material_rules.mdc) |
+| **Voice** | Swamy's first-person learning journey; avoid instructor/course framing | `.github/copilot-instructions.md` |
+| **Code style** | PEP 8, `pathlib`, comments explain *why* | `.github/copilot-instructions.md` |
+| **Notebooks** | Context → Data setup → Cleaning/transformation → Validation → Reflection | [03_quality-assurance.mdc](./03_quality-assurance.mdc) |
+
+---
+
+## Environment and commands
+
+```powershell
+$Env:UV_LINK_MODE = "copy"
+uv sync
+jupyter notebook
+```
+
+---
+
+## Quality quick-check
+
+- [ ] Seven-layer parity for in-scope weeks (naming + links + concepts)
+- [ ] All 8 weeks complete; extend on demand for future weeks
+- [ ] Kernel Restart & Run All passes for notebooks
+- [ ] Content is original synthesis with citations where needed
+- [ ] No `source-material/` references in public docs

@@ -1,0 +1,44 @@
+---
+description: Naming conventions for week companions, notebooks, scripts, and notes
+globs: *
+---
+# File Naming Conventions
+
+> **Seven-layer week bundles (this repo)**: See [09_week-companion-architecture.mdc](./09_week-companion-architecture.mdc) for the week reference table, on-demand creation, learning flow, and migration SOP.
+
+## Topic / week numbering
+
+- **Start at `01_`**: Week/topic numbering starts at `01_` (no `00_`).
+- **Sequential**: Use `01_` … `08_` for the Term 1 course map in rule `09` (extend with `09_`+ only if the curriculum adds more weeks).
+
+## Week-based naming (`weeks/weekN/`)
+
+All eight weeks use `weeks/weekN/` folders with step-numbered filenames. The folder name provides the week context.
+
+| Step | Filename | Layer |
+|------|----------|-------|
+| 01 | `01_reading-notes.md` | Theory — concepts, definitions, intuition (first-person voice) |
+| 02 | `02_examples.md` | Practice — worked examples (original scenarios) |
+| 03 | `03_quiz.md` | Self-assessment (original synthesis only; one per week default) |
+| 04 | `04_notebook.ipynb` | Experiments — hands-on preprocessing and visualizations |
+| 05 | `05_model-paper.md` | Model papers — exam-style readiness (answers in-file or paired file) |
+| 06 | `06_discussion.md` | Discussion — reflection / forum prompts for the same week |
+| 07 | `07_assignment.md` | Assignment — structured weekly deliverables |
+
+**Trimester-level extras in `weeks/`:**
+
+- `weeks/assignments/` — Graded assignment (FIFA21 + Laptop datasets)
+- `weeks/model-papers/` — 5 comprehensive exam papers covering all 8 weeks + consolidated answers guide
+
+## Python scripts (`src/`)
+
+- Use **snake_case** (standard Python).
+- **No** `XX_` topic prefix required — this is utility/library code, not a learning layer.
+
+## Images & figures
+
+- Descriptive kebab-case (e.g. `missing-values-plot.png`).
+
+## Tools (`tools/`)
+
+- Scripts and helpers only; not part of the seven learning layers.

@@ -1,0 +1,180 @@
+---
+description: Seven-layer week companion architecture (DPP only), on-demand weeks, naming contract, migration SOP, quality gates
+globs: *
+---
+# Week Companion Architecture — Seven Layers (Data Preprocessing)
+
+**Project**: Data Preprocessing (M.Sc. DSAI)
+
+**Scope**: This **seven-layer** contract applies to **`t1-data-preprocessing` only**. Other course repositories may use a different number or mix of layers (do not assume parity across repos).
+
+This rule is the **governance anchor** for week-wise learning bundles. For naming patterns, see [07_file-naming-conventions.mdc](./07_file-naming-conventions.mdc). For zero-copy and voice, see [01_educational-content-rules.mdc](./01_educational-content-rules.mdc).
+
+---
+
+## 1. Objectives
+
+1. **Consistent week-wise system**: For any **week you add**, use the same **seven** learning layers, discoverable and cross-linked.
+2. **On-demand weeks**: Create week bundles **only when that week is started** — do **not** pre-scaffold future weeks or empty companions. Weeks not yet begun require **no** files.
+3. **Maintainable & submission-ready**: Content stays aligned across layers for active weeks; utilities stay out of learning folders.
+4. **Separation of concerns**: Learning artifacts live only in the seven layer directories; reusable program code lives in `src/` (and maintenance scripts in `tools/`).
+
+*(The live course may still target many weeks over time — e.g. eight or more — but the repository grows **week by week**, not all at once.)*
+
+---
+
+## 2. The seven learning layers (this repo)
+
+All weeks use `weeks/weekN/` folders with step-numbered filenames:
+
+| Order | Layer | Filename | Role |
+|------:|--------|----------|------|
+| 1 | Reading notes | `01_reading-notes.md` | Theory, definitions, intuition (first-person learning journey) |
+| 2 | Examples | `02_examples.md` | Worked scenarios (original synthesis) |
+| 3 | Quizzes | `03_quiz.md` | Self-assessment (original synthesis only) |
+| 4 | Notebooks | `04_notebook.ipynb` | Computational experiments, pipelines, plots |
+| 5 | Model papers | `05_model-paper.md` | Exam-style readiness; validates the same week’s concepts |
+| 6 | Discussion prompt | `06_discussion.md` | Reflection, forum, or cohort discussion prompts tied to the week |
+| 7 | Assignments | `07_assignment.md` | Structured weekly deliverables (tasks, rubric, submission expectations; original synthesis) |
+
+**Utility / non-layer areas**: `src/` (library code), `tools/` (lint, health, conversions), `docs/` (meta). **`source-material/`** is read-only archival input — never treated as a learning layer.
+
+---
+
+## 3. Week mapping (reference + on-demand growth)
+
+- **Week numbers** use `XX_` with two digits (no `00_`). Number weeks sequentially as you add them (`01_`, `02_`, …).
+- For **each week that exists in the repo**, the **topic slug** `<slug>` (kebab-case) must be **identical** across **all seven** layers for that week.
+
+**Term 1 calendar (weeks 01–08):** Focus titles match the course schedule. All eight weeks are fully migrated to `weeks/week1/` through `weeks/week8/`.
+
+| Week | Focus (course) | Canonical topic slug (`<slug>`) |
+|------|----------------|-----------------------------------|
+| 01 | Introduction to Data Science | `foundations-of-data-preprocessing` |
+| 02 | Data | `data-and-attributes` |
+| 03 | Data Quality and Issues | `data-quality-and-issues` |
+| 04 | Data Cleaning | `data-cleaning-and-integration` |
+| 05 | Data Transformation and Aggregation | `data-transformation-and-aggregation` |
+| 06 | Data Reduction | `data-reduction` |
+| 07 | Proximity Measures | `proximity-measures` |
+| 08 | Data Explainability | `data-explainability` |
+
+**Extending beyond week 08 (on demand):** If the curriculum adds more weeks, (1) fix the final `<slug>` (append a row here first), (2) add **all seven** companion files for that week in one coherent pass (or document WIP in `docs/reviews/` until complete), (3) update this table and `.github/copilot-instructions.md` / `CLAUDE.md` / `docs/02_learning-roadmap.md` in the same change set when the slug is stable. `docs/01_repository-structure.md` points here for the slug map.
+
+**Note (assignments — layer 7):** All eight weeks now include `07_assignment.md`. New weeks started in the future should include all **seven** layers before being marked complete.
+
+---
+
+## 4. Naming contract
+
+All weeks use `weeks/weekN/` folders with step-numbered filenames:
+
+| Step | Filename |
+|------|----------|
+| 01 | `01_reading-notes.md` |
+| 02 | `02_examples.md` |
+| 03 | `03_quiz.md` |
+| 04 | `04_notebook.ipynb` |
+| 05 | `05_model-paper.md` |
+| 06 | `06_discussion.md` |
+| 07 | `07_assignment.md` |
+
+**Example — Week 1:** `weeks/week1/01_reading-notes.md` through `weeks/week1/07_assignment.md`.
+
+1. **One primary artifact per layer per week** unless the repo explicitly splits a layer (then cross-link).
+2. **Model paper answers**: Same file (preferred) or a paired answers file — still one **model-papers layer** for the week.
+
+**Trimester-level extras in `weeks/`:**
+
+- `weeks/assignments/` — Graded assignment (FIFA21 + Laptop datasets)
+- `weeks/model-papers/` — 5 comprehensive exam papers covering all 8 weeks + consolidated answers guide
+
+---
+
+## 5. Learning flow (cross-reference order)
+
+1. Read **theory** (`weeks/weekN/01_reading-notes.md`)
+2. Practice **examples** (`weeks/weekN/02_examples.md`)
+3. Attempt **quiz** (`weeks/weekN/03_quiz.md`)
+4. Run **notebook** (`weeks/weekN/04_notebook.ipynb`)
+5. **Validate** with **model paper** (`weeks/weekN/05_model-paper.md`)
+6. **Discuss** using **discussion prompt** (`weeks/weekN/06_discussion.md`)
+7. **Submit** or complete **assignment** (`weeks/weekN/07_assignment.md`)
+
+Updating any one layer for a week should trigger a **quick consistency review** of the **other six** (concepts, terminology, links).
+
+---
+
+## 6. Core governance rules
+
+1. **Future weeks**: There is **no** obligation to create files for weeks you have not started.
+2. For each **week in progress or marked done**, **all seven** primary artifacts should exist for that week to be “complete”.
+3. **No week is complete** until all required layers are present, named per contract, and conceptually aligned (or an explicit WIP note exists in `docs/reviews/`).
+4. **Golden rules**: (a) utilities only in `src/` / `tools/`; (b) `source-material/` stays untouched; (c) parity across the seven layers is mandatory **only for weeks that exist** in the repo (finished or explicitly WIP).
+
+---
+
+## 7. Migration SOP (reference — migration is complete)
+
+All eight weeks are fully migrated to `weeks/weekN/`. This SOP is retained for reference if the repository is extended.
+
+1. **Freeze** naming contract and topic slugs.
+2. **Inventory** files; map renames; detect collisions.
+3. **Execute** renames in phases.
+4. After **each phase**: fix links; run checks.
+5. **Update** `docs/01_repository-structure.md`, roadmap, README **after** the tree is stable.
+
+---
+
+## 8. Notebook policy
+
+1. **Ordering**: Notebook week numbers align with `XX_`.
+2. **Reproducibility**: Kernel restart → run all cells; random seeds where needed.
+3. **Conceptual flow**: **Context → Data setup → Cleaning/transformation → Validation → Reflection** (headings match the week slug family).
+4. **Titles**: Recognizable as the same week/topic as reading notes.
+5. **Visual enrichment from slides**: Source PDF/PPTX diagrams that cannot be embedded (zero-copy) must be converted to original-synthesis visuals using the three-pathway pattern: flowcharts/hierarchies → Mermaid block in `01_reading-notes.md`; scatter/bar/clustering charts → `matplotlib` code cell in this notebook; transaction/data tables → original Markdown table in `02_examples.md`. Full colour convention and cell rules in `.github/copilot-instructions.md` § "Visual enrichment from source slides".
+
+---
+
+## 9. Quality gates
+
+| Gate | Checks |
+|------|--------|
+| **Naming** | `XX_` + shared `<slug>` + correct layer suffix |
+| **Companion parity** | Seven primary artifacts per finished week |
+| **Content integrity** | Zero-copy / citations (`01`) |
+| **Links** | Cross-layer links valid |
+| **Notebook health** | Valid JSON, executable order, no hidden state |
+| **Visual enrichment** | Key slide diagrams represented as Mermaid (reading-notes) or matplotlib (notebook); no university images embedded |
+
+---
+
+## 10. Definition of done (per week)
+
+- [ ] Seven artifacts exist and follow the naming contract.
+- [ ] Concepts match across all seven layers.
+- [ ] Notebook runs cleanly top-to-bottom.
+- [ ] No broken cross-references for that week.
+- [ ] Key diagrams from source slides are represented as Mermaid (reading-notes) or `matplotlib` cells (notebook) — no university images embedded.
+
+---
+
+## 11. Operating rhythm (weekly)
+
+1. Reading notes → 2. Examples → 3. Quiz → 4. Notebook → 5. Model paper → 6. Discussion prompt → 7. Assignment
+Then run a **parity pass** across all seven layers.
+
+---
+
+## 12. Risks & mitigations
+
+| Risk | Mitigation |
+|------|------------|
+| Naming drift | This rule + `07`; periodic sweep |
+| Companion mismatch | Definition of done; update siblings when one layer changes |
+| Notebook lag | Notebooks in DoD; migrate notebooks last |
+| Assignments backfill | All 8 weeks complete; extend on demand for future weeks |
+
+---
+
+**Related**: `.github/copilot-instructions.md`, [08_copilot-instructions-extract.mdc](./08_copilot-instructions-extract.mdc), [`.github/skills/week-companions/SKILL.md`](../../.github/skills/week-companions/SKILL.md).

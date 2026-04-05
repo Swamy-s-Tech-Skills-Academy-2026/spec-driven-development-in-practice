@@ -1,0 +1,68 @@
+---
+description: Rules for creating educational content and notes
+globs: *.md, *.ipynb
+---
+# Educational Content Rules
+
+**Context**: Academic Note-taking & Practice
+**Priority**: HIGH
+
+---
+
+## 📋 Core Principles
+
+### Academic Integrity (Zero-Copy)
+- **Original Synthesis**: Do not copy-paste directly from textbooks or lecture slides. Read, understand, and write in your own words.
+- **Citation**: If referencing a specific definition or theorem, cite the source.
+- **Review Strictness**: Reviewers must reject PRs that appear to be direct copies or close paraphrases of source material.
+
+### Clarity & Structure
+- **Concept First**: Explain the concept in Markdown before writing code.
+- **Math Notation**: Use LaTeX for mathematical expressions where relevant.
+- **Visuals**: Use plots and tables to illustrate data and relationships whenever possible. Source slides (PDF/PPTX in `source-material/`) contain conceptual diagrams that **cannot** be embedded directly (zero-copy policy). Apply the three-pathway pattern:
+  - Flowchart / pipeline / hierarchy / decision tree → Mermaid block in `01_reading-notes.md`
+  - Scatter / clustering / bar / line chart → `matplotlib` code cell in `04_notebook.ipynb`
+  - Transaction table / data table → original Markdown table in `02_examples.md` (different data from source)
+  See the "Visual enrichment from source slides" subsection in `.github/copilot-instructions.md` for the Mermaid colour convention and `matplotlib` cell rules.
+
+### Code in Education
+- **Comments**: Comment liberally to explain the intent (e.g., why we normalize, what a column represents).
+- **Variable Names**: Use verbose, descriptive names (`cleaned_column` vs `x`).
+- **Reproducibility**: Ensure seeds are set for any random processes.
+
+## Voice and Tone
+- **Personal learning journey**: Write reading notes as Swamy's first-person learning journey (avoid "course" or instructor tone).
+- **Reflection-oriented**: Prefer "I'm learning…", "I plan to…", "I want to be able to…" over generic descriptions.
+- **Avoid course framing**: Don't title notes as "Course …" or write like a lecturer; write like personal notes (e.g., "My learning journey", "My revision notes").
+
+## Seven-Layer Week Companion Architecture (this repo)
+
+For each **week you add**, maintain **seven** companion artifacts with the same `XX_` prefix and **shared topic slug** across layers. Weeks are created **on demand** — no need to scaffold future weeks. This model is **specific to `t1-data-preprocessing`**; other repos may use different layers.
+
+Full contract: [09_week-companion-architecture.mdc](./09_week-companion-architecture.mdc).
+
+**Week-based folder layout:** All Term 1 weeks use `weeks/weekN/` with step-numbered filenames (`01_reading-notes.md` through `07_assignment.md`). See `docs/01_repository-structure.md` and rule `09`.
+
+1. **Theory**: `weeks/weekN/01_reading-notes.md` — concepts, definitions, intuition (first-person learning journey voice)
+2. **Practice**: `weeks/weekN/02_examples.md` — worked examples (original scenarios)
+3. **Quizzes**: `weeks/weekN/03_quiz.md` — self-assessment (original synthesis only)
+4. **Experiments**: `weeks/weekN/04_notebook.ipynb` — hands-on preprocessing and visualizations
+5. **Model papers**: `weeks/weekN/05_model-paper.md` — exam-style readiness (answers in-file or paired answers file)
+6. **Discussion prompts**: `weeks/weekN/06_discussion.md` — reflection / forum prompts for the same week
+7. **Assignments**: `weeks/weekN/07_assignment.md` — structured weekly deliverables (original synthesis)
+
+**Do not copy** author/course samples (e.g. graded quizzes, practice quizzes from the institution) into `examples/` or `quizzes/`. Those remain reference-only; all public examples and quiz content must be original synthesis.
+
+**Learning flow**: Read theory → Practice examples → Do quiz → Run notebook → Validate with model paper → Engage with discussion prompt → Complete assignment
+
+**Topic / week numbering**
+
+- Start at `01_` (no `00_` prefix)
+- Number weeks sequentially (`01_`, `02_`, …) as each week is started
+- Same `XX_` + `<slug>` across all **seven** layers (see rule `09` for the slug table)
+- Prefer **one** quiz file per week; a second file only if explicitly needed and cross-linked
+
+## Markdown Standards
+- Use H2 (`##`) for main topics, H3 (`###`) for subtopics.
+- Use blockquotes (`>`) for definitions or key takeaways.
+- Use tables for summarizing properties or steps where helpful.

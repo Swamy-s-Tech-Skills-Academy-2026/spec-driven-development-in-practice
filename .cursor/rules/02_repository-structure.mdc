@@ -1,0 +1,32 @@
+---
+description: Repository structure for Data Preprocessing
+globs: *
+---
+# Repository Structure
+
+**Project**: Data Preprocessing (M.Sc. DSAI)
+
+> **📖 Single Source of Truth**: For the complete and detailed repository structure, naming conventions, and workflow standards, please refer to [docs/01_repository-structure.md](../../docs/01_repository-structure.md).
+
+## Quick Summary
+
+**Seven learning layers** (week companions — **this repo only** — see [09_week-companion-architecture.mdc](./09_week-companion-architecture.mdc)):
+
+All eight weeks live under `weeks/week1/` through `weeks/week8/` with step-numbered filenames:
+
+- `01_reading-notes.md` — Theory (first-person learning journey)
+- `02_examples.md` — Practice (worked scenarios)
+- `03_quiz.md` — Self-assessment (original synthesis only)
+- `04_notebook.ipynb` — Preprocessing experiments
+- `05_model-paper.md` — Model exam papers / answers
+- `06_discussion.md` — Week-scoped discussion / reflection prompts
+- `07_assignment.md` — Week-scoped structured deliverables
+
+Trimester-level extras: `weeks/assignments/` (graded assignment) and `weeks/model-papers/` (comprehensive papers).
+
+**Not layers** (utilities only):
+
+- **`src/`**: Reusable library code imported by notebooks
+- **`tools/`**: Maintenance scripts (PowerShell, Python)
+
+When writing or updating public-facing structure (e.g. docs/01_repository-structure.md, README), do not list or mention any internal-only paths.

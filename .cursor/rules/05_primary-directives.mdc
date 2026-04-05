@@ -1,0 +1,37 @@
+---
+description: Primary directives for Data Preprocessing
+globs: *
+---
+# Primary Directives
+
+## Project Focus
+
+This is an **Academic Learning Workspace** for Data Preprocessing that:
+- Implements data cleaning, transformation, and pipeline concepts in Python
+- Provides clear, structured notes in Markdown
+- Uses Jupyter Notebooks for interactive learning
+- Prioritizes clarity and reproducibility
+
+### Educational Philosophy
+- **Educational first**: Prioritize clarity, correctness, and explainability over performance.
+- **From scratch mindset**: Avoid heavy abstractions; keep logic explicit and inspectable.
+- **Document intent**: Update docs when structure, behavior, or learning flow changes.
+- **Seven-layer week bundles (this repo)**: For each **week in the repo**, seven aligned artifacts in `weeks/weekN/` (`01_reading-notes.md` through `07_assignment.md`) when that week is complete (see [09_week-companion-architecture.mdc](./09_week-companion-architecture.mdc)). New weeks are added **on demand** — no pre-scaffolding. Reusable code stays in `src/` only — not mixed in as a substitute layer.
+
+## Current State
+
+- ✅ Term 1 Complete: All 8 weeks migrated and reviewed
+- ✅ Tech Stack: Python, Jupyter, NumPy, Pandas, Matplotlib, Seaborn (and course-relevant libraries)
+- ❌ NOT a Web Application: No Flask, Django, or React.
+- ❌ NOT a Production System: Code is for educational and practice purposes.
+
+## Documentation Accuracy
+
+- Notes must accurately reflect preprocessing concepts and best practices.
+- Code comments should explain the *why* of the operation, not just the *how* of the Python code.
+
+## Code Maintenance
+
+- Notebooks should be reproducible (Restart Kernel & Run All should work).
+- Separate reusable logic into `src/` modules where appropriate.
+- Use strict typing in Python scripts (`src/`) but relax it in Notebooks for exploration.
