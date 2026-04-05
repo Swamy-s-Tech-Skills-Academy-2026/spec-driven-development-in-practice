@@ -1,10 +1,12 @@
 # Agent skills (canonical)
 
-This directory is the **source of truth** for bundled agent skills used with Cursor and GitHub Copilot (see `.github/copilot-instructions.md`).
+This directory is the **source of truth** for bundled agent skills used with Cursor and GitHub Copilot
+(see `.github/copilot-instructions.md`).
 
 ## Mirror
 
-`.cursor/skills/` must stay **identical** to `.github/skills/` (same paths, same `SKILL.md` and `README.md` bytes). After editing here, copy the updated tree to `.cursor/skills/`.
+`.cursor/skills/` must stay **identical** to `.github/skills/` (same paths, same `SKILL.md` and
+`README.md` bytes). After editing here, copy the updated tree to `.cursor/skills/`.
 
 ### Verify parity (PowerShell, repo root)
 

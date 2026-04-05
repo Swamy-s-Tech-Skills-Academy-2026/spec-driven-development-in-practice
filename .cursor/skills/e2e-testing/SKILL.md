@@ -1,11 +1,14 @@
 ---
 name: e2e-testing
-description: Smoke verification for spec-driven-development-in-practice — Markdown lint and optional link check. Use when asked to smoke-test the workspace end-to-end.
+description: >
+  Smoke verification for spec-driven-development-in-practice — Markdown lint and optional link check.
+  Use when asked to smoke-test the workspace end-to-end.
 ---
 
 # Smoke verification — Markdown workspace
 
-There is no deployed application or Python package in this repository. “End-to-end” here means **documentation quality checks** that align with CI.
+There is no deployed application or Python package in this repository. “End-to-end” here means
+**documentation quality checks** that align with CI.
 
 ## Prerequisites
 
@@ -30,4 +33,5 @@ There is no deployed application or Python package in this repository. “End-to
 
 ## Summary
 
-Report each step **PASS** / **FAIL** / **SKIPPED**. Note any glob paths with no matching files (expected until topic folders gain content).
+Report each step **PASS** / **FAIL** / **SKIPPED**. Note any glob paths with no matching files
+(expected until topic folders gain content).

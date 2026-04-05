@@ -1,10 +1,15 @@
 # Repository skills (Spec-Driven Development in Practice)
 
-This file is **local to `spec-driven-development-in-practice`**. It complements `.cursor/rules/*.mdc` and `.github/copilot-instructions.md` with concise guidance for assistants editing this repo.
+This file is **local to `spec-driven-development-in-practice`**. It complements `.cursor/rules/*.mdc`
+and `.github/copilot-instructions.md` with concise guidance for assistants editing this repo.
 
-**Strict scope:** This repo is **Swamy PKV’s personal learning only** — not courseware for others. See `README.md` (**Scope**) and `.cursor/rules/00_swamy_personal_learning_only.mdc`.
+**Strict scope:** This repo is **Swamy PKV’s personal learning only** — not courseware for others.
+See `README.md` (**Scope**) and `.cursor/rules/00_swamy_personal_learning_only.mdc`.
 
-**Bundled agent skills (folder format):** `.github/skills/` is canonical; `.cursor/skills/` is a **byte-identical mirror** (see `.github/skills/README.md` for the parity script). Bundles: **`sdd-learning`** (domain), **`topic-units`** (on-demand topic layout + naming), **`ci-checks`**, **`docs-verification`**, **`workspace-review`**, **`e2e-testing`**.
+**Bundled agent skills (folder format):** `.github/skills/` is canonical; `.cursor/skills/` is a
+**byte-identical mirror** (see `.github/skills/README.md` for the parity script). Bundles:
+**`sdd-learning`** (domain), **`topic-units`** (on-demand topic layout + naming), **`ci-checks`**,
+**`docs-verification`**, **`workspace-review`**, **`e2e-testing`**.
 
 ---
 
@@ -23,17 +28,21 @@ Content lives in top-level topic directories. Create files only when work on tha
 
 Files use **`NN_<slug>.md`** (two-digit prefix, kebab-case). Never `00_`.
 
-**Authority:** `.cursor/rules/09_week-companion-architecture.mdc`. **Naming:** `.cursor/rules/07_file-naming-conventions.mdc`.
+**Authority:** `.cursor/rules/09_week-companion-architecture.mdc`. **Naming:**
+`.cursor/rules/07_file-naming-conventions.mdc`.
 
-When I edit one file in a topic line of thought, I check sibling notes in the same folder for consistent terminology and links.
+When I edit one file in a topic line of thought, I check sibling notes in the same folder for
+consistent terminology and links.
 
 ---
 
 ## When editing learning content
 
-- **Voice**: first-person learning journey in notes; avoid lecturer or “course” framing (see copilot instructions).
+- **Voice**: first-person learning journey in notes; avoid lecturer or “course” framing (see copilot
+  instructions).
 - **Zero-copy**: original synthesis in public folders; cite definitions when needed.
-- **`reference-material/`** (if present): read-only staging; do not surface it in public-facing docs per `.cursor/rules/06_source_material_rules.mdc`.
+- **`reference-material/`** (if present): read-only staging; do not surface it in public-facing docs per
+  `.cursor/rules/06_source_material_rules.mdc`.
 
 ---
 
@@ -48,8 +57,13 @@ When I edit one file in a topic line of thought, I check sibling notes in the sa
 
 ## CI expectations
 
-- **Docs:** Markdown lint on globs in `.github/workflows/ci-documentation.yml`; optional Lychee per `lychee.toml` / `CLAUDE.md`.
-- **Parity:** `.github/skills/` ↔ `.cursor/skills/` must stay byte-identical (`.github/workflows/ci-skills-parity.yml`; enforced when agent docs change via `ci-agent-docs-guard.yml`).
-- **Agent docs:** `ci-agent-docs-guard.yml` validates required `.cursor/rules` files, `CLAUDE.md` / `.cursor/skills.md` references, and skills mirror parity when those paths change.
+- **Docs:** Markdown lint on globs in `.github/workflows/ci-documentation.yml`; optional Lychee per
+  `lychee.toml` / `CLAUDE.md`.
+- **Parity:** `.github/skills/` ↔ `.cursor/skills/` must stay byte-identical
+  (`.github/workflows/ci-skills-parity.yml`; enforced when agent docs change via
+  `ci-agent-docs-guard.yml`).
+- **Agent docs:** `ci-agent-docs-guard.yml` validates required `.cursor/rules` files,
+  `CLAUDE.md` / `.cursor/skills.md` references, and skills mirror parity when those paths change.
 
-When in doubt, treat **`README.md`** and **`CLAUDE.md`** as the public structural anchors and keep `.github/copilot-instructions.md` aligned with them.
+When in doubt, treat **`README.md`** and **`CLAUDE.md`** as the public structural anchors and keep
+`.github/copilot-instructions.md` aligned with them.

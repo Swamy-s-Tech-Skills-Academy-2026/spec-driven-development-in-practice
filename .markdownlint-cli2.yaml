@@ -22,6 +22,9 @@ config:
   # README shields use inline HTML.
   MD033: false
 
+  # Table pipe alignment is optional for small docs tables.
+  MD060: false
+
   # Avoid noisy failures for tight list/fence spacing common in notes.
   MD031: false
   MD032: false

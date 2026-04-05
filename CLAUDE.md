@@ -1,14 +1,20 @@
 # CLAUDE.md — Claude Code entry point
 
-This file provides Claude Code with the essential context for working in this repository. For full details, see the referenced files below.
+This file provides Claude Code with the essential context for working in this repository.
+For full details, see the referenced files below.
 
 ## Repository
 
-**Spec-Driven Development in Practice** — Swamy PKV's personal learning workspace for exploring Spec-Driven Development (SDD) and deterministic AI system design. Markdown-first notes and experiments. **Not** a web application or production system.
+**Spec-Driven Development in Practice** — Swamy PKV's personal learning workspace for exploring
+Spec-Driven Development (SDD) and deterministic AI system design. Markdown-first notes and experiments.
+**Not** a web application or production system.
 
 ## Non-negotiable: Swamy only
 
-This repository is **Swamy PKV's personal learning** material. It is **not** maintained for other learners, employers, or the public. Do **not** reword `README.md`, reading notes, or docs to imply a general audience (for example "students," "learners," "you" as a tutorial reader) unless Swamy explicitly asks. Preserve the **Scope** block in `README.md`.
+This repository is **Swamy PKV's personal learning** material. It is **not** maintained for other
+learners, employers, or the public. Do **not** reword `README.md`, reading notes, or docs to imply a
+general audience (for example "students," "learners," "you" as a tutorial reader) unless Swamy
+explicitly asks. Preserve the **Scope** block in `README.md`.
 
 ## Repository structure
 
@@ -30,7 +36,9 @@ Topic files within each folder use kebab-case numbered names (`01_`, `02_`, …)
 
 ## Agent skills (`SKILL.md`)
 
-Bundled on-demand procedures live under `.github/skills/` (mirrored at `.cursor/skills/`). They use YAML frontmatter plus a Markdown body so agents can match tasks without loading everything up front. How that complements `CLAUDE.md`, rules, and MCP: **`docs/agent-skills.md`**.
+Bundled on-demand procedures live under `.github/skills/` (mirrored at `.cursor/skills/`). They use YAML
+frontmatter plus a Markdown body so agents can match tasks without loading everything up front. How that
+complements `CLAUDE.md`, rules, and MCP: **`docs/agent-skills.md`**.
 
 ## Key rules
 
@@ -50,7 +58,12 @@ Aligned with `.github/workflows/ci-documentation.yml`. Full commands: `.github/s
 npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" "notes/**/*.md" "specs/**/*.md" "evals/**/*.md" "patterns/**/*.md" "experiments/**/*.md"
 ```
 
-Optional link check: `docker run --rm -v "${PWD}:/workspace" -w /workspace lycheeverse/lychee:latest --config lychee.toml --cache --max-cache-age 1d '**/*.md'`
+Optional link check:
+
+```bash
+docker run --rm -v "${PWD}:/workspace" -w /workspace lycheeverse/lychee:latest \
+  --config lychee.toml --cache --max-cache-age 1d '**/*.md'
+```
 
 ## Key files
 

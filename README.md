@@ -1,19 +1,20 @@
 # Spec-Driven Development in Practice
 
 [![License](https://img.shields.io/badge/License-MIT-purple)](LICENSE)
-[![Status](https://img.shields.io/badge/Status-Learning-blue)]()
-[![Focus](https://img.shields.io/badge/Focus-Spec--Driven--Development-orange)]()
-[![Type](https://img.shields.io/badge/Type-Learning%20Repository-lightgrey)]()
-[![Domain](https://img.shields.io/badge/Domain-AI%20Engineering-yellow)]()
-[![Approach](https://img.shields.io/badge/Approach-Spec%20First-red)]()
-[![Method](https://img.shields.io/badge/Method-Eval%20Driven-blueviolet)]()
-[![Maintainer](https://img.shields.io/badge/Maintainer-Viswanatha%20Swamy%20P%20K-blue)]()
+[![Status](https://img.shields.io/badge/Status-Learning-blue)](https://github.com/Swamy-s-Tech-Skills-Academy-2026/spec-driven-development-in-practice)
+[![Focus](https://img.shields.io/badge/Focus-Spec--Driven--Development-orange)](https://github.com/Swamy-s-Tech-Skills-Academy-2026/spec-driven-development-in-practice)
+[![Type](https://img.shields.io/badge/Type-Learning%20Repository-lightgrey)](https://github.com/Swamy-s-Tech-Skills-Academy-2026/spec-driven-development-in-practice)
+[![Domain](https://img.shields.io/badge/Domain-AI%20Engineering-yellow)](https://github.com/Swamy-s-Tech-Skills-Academy-2026/spec-driven-development-in-practice)
+[![Approach](https://img.shields.io/badge/Approach-Spec%20First-red)](https://github.com/Swamy-s-Tech-Skills-Academy-2026/spec-driven-development-in-practice)
+[![Method](https://img.shields.io/badge/Method-Eval%20Driven-blueviolet)](https://github.com/Swamy-s-Tech-Skills-Academy-2026/spec-driven-development-in-practice)
+[![Maintainer](https://img.shields.io/badge/Maintainer-Viswanatha%20Swamy%20P%20K-blue)](https://github.com/Swamy-s-Tech-Skills-Academy-2026/spec-driven-development-in-practice)
 
 ---
 
 ## Purpose
 
-This repository is a **learning-focused space** to explore and understand **Spec-Driven Development (SDD)** and its role in building **deterministic AI systems**.
+This repository is a **learning-focused space** to explore and understand **Spec-Driven Development (SDD)**
+and its role in building **deterministic AI systems**.
 
 ---
 

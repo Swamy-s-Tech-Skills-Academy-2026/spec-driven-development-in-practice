@@ -1,13 +1,16 @@
 ---
 name: ci-checks
-description: Run CI-aligned Markdown quality checks locally for spec-driven-development-in-practice. Use when asked to run CI, lint, or verify documentation quality.
+description: >
+  Run CI-aligned Markdown quality checks locally for spec-driven-development-in-practice.
+  Use when asked to run CI, lint, or verify documentation quality.
 ---
 
 # CI checks — local runner (Markdown)
 
 Commands mirror `.github/workflows/ci-documentation.yml` and the Markdown guard job in `.github/workflows/ci-agent-docs-guard.yml`.
 
-Repo-wide Markdown rules live in **`.markdownlint-cli2.yaml`** at the repository root; `markdownlint-cli2` loads it automatically when run from that directory.
+Repo-wide Markdown rules live in **`.markdownlint-cli2.yaml`** at the repository root;
+`markdownlint-cli2` loads it automatically when run from that directory.
 
 ## Policy
 
