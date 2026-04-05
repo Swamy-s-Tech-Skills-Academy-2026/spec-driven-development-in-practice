@@ -59,12 +59,13 @@ This is **NOT a production project**.
 ## 🏗️ Repository Structure (Evolving)
 
 ```text
-/specs           # Example specifications
-/evals           # Evaluation strategies and approaches
+/specs           # Behavior specifications and prompt contracts
+/evals           # Evaluation strategies and eval loop designs
 /patterns        # SDD patterns and practices
 /experiments     # Small experiments and iterations
-/notes           # Theory, insights, and learnings
-````
+/notes           # Theory, insights, and evolving understanding
+/docs            # Meta-documentation and guides
+```
 
 ---
 
@@ -92,7 +93,7 @@ Production-grade implementations based on these learnings will be published in *
 
 ## 🤝 Contributions
 
-This is primarily a personal learning repository, but discussions and ideas are welcome.
+This repository is for my personal learning. I do not treat it as shared courseware or a collaboration surface for others.
 
 ---
 

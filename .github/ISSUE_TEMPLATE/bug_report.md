@@ -1,6 +1,6 @@
 ---
 name: Bug Report
-about: Report a bug or error in the repository
+about: Report incorrect or broken content in the repository
 title: '[BUG] '
 labels: bug
 assignees: ''
@@ -8,7 +8,7 @@ assignees: ''
 
 ## Description
 
-A clear and concise description of what the bug is.
+A clear and concise description of what is wrong.
 
 ## Location
 
@@ -18,37 +18,36 @@ A clear and concise description of what the bug is.
 
 **Section(s) affected**:
 
-- Section name or line numbers
+- Section name or approximate line numbers
 
-## Steps to Reproduce
+## Steps to reproduce
 
-1. Open Notebook '...'
-2. Run cell number '...'
-3. See error
+1. Open `…`
+2. Follow link / read section `…`
+3. Observe `…`
 
-## Expected Behavior
+## Expected behavior
 
-A clear and concise description of what you expected to happen.
+What I expected to see or have work.
 
-## Actual Behavior
+## Actual behavior
 
-A clear and concise description of what actually happened.
+What I observed instead.
 
 ## Screenshots
 
-If applicable, add screenshots to help explain your problem.
+If applicable, add screenshots to help explain the problem.
 
-## Additional Context
+## Additional context
 
-- **Component**: [reading-notes / notebooks / examples / src / docs / tools / Other]
+- **Area**: [notes / specs / evals / patterns / experiments / docs / automation / Other]
 - **Severity**: [Low / Medium / High]
-- **Impact**: How does this affect the learning workspace?
+- **Impact**: How this affects my use of the learning workspace
 
-## Proposed Fix (Optional)
+## Proposed fix (optional)
 
-If you have a suggestion for how to fix this, please describe it here.
+If I already have a fix in mind, describe it here.
 
 ---
 
-**Note**: This repository is for Data Preprocessing (M.Sc. DSAI). Bug reports help improve Swamy's learning workspace.
-
+**Note:** This repository is Swamy PKV’s personal Spec-Driven Development learning workspace.

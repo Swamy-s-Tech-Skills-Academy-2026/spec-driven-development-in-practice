@@ -1,0 +1,9 @@
+# Lychee link checker — https://lychee.cli.rs/usage/config/
+# Used by .github/workflows/ci-documentation.yml
+
+cache = true
+max_cache_age = "1d"
+
+[lychee]
+accept = ["200", "206", "301", "302", "308"]
+exclude_mail = true

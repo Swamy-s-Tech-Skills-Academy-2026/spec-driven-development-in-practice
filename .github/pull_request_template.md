@@ -4,87 +4,65 @@
 
 A clear and concise description of what this PR does.
 
-## Type of Change
+## Type of change
 
-- [ ] 🐛 Bug fix (non-breaking change which fixes an issue)
-- [ ] ✨ New feature (non-breaking change which adds functionality)
-- [ ] 📝 Documentation update
-- [ ] 🔧 Content improvement
-- [ ] 🎨 Formatting/styling (no content change)
-- [ ] ♻️ Refactoring (no functional change)
-- [ ] ⚡ Performance improvement
-- [ ] 🧪 Test addition/update
-- [ ] 🔨 Build/CI changes
-- [ ] 🗑️ Content removal
+- [ ] Bug fix (non-breaking change which fixes an issue)
+- [ ] New content in topic folders (`notes/`, `specs/`, `evals/`, `patterns/`, `experiments/`)
+- [ ] Documentation update (`README.md`, `docs/`, meta-docs)
+- [ ] Formatting or lint-only (no meaning change)
+- [ ] Refactor (move/rename without changing substance)
+- [ ] CI / automation (`.github/`, workflows)
+- [ ] Agent rules or skills (`.cursor/`, `.github/skills/`)
 
-## Content Type
+## Content type
 
-- [ ] Week companion files (`weeks/weekN/`)
-- [ ] Trimester assignment (`weeks/assignments/`)
-- [ ] Trimester model papers (`weeks/model-papers/`)
-- [ ] Python Script (`src/`)
-- [ ] Documentation (`README.md`, `docs/`, etc.)
-- [ ] Configuration (`.github/`, `.cursor/`, etc.)
+- [ ] `notes/`
+- [ ] `specs/`
+- [ ] `evals/`
+- [ ] `patterns/`
+- [ ] `experiments/`
+- [ ] `docs/`
+- [ ] Repository configuration (`.github/`, `.cursor/`, `CLAUDE.md`)
 
-## Changes Made
+## Changes made
 
-### Files Changed
+### Files changed
 
-- `path/to/file1.md`
-- `path/to/file2.md`
+- `path/to/file.md`
 
 ### Summary
 
-Brief summary of what was changed and why.
+Brief summary of what changed and why.
 
 ## Checklist
 
-### Pre-Submission
+### Pre-submission
 
-- [ ] I have reviewed the repository contribution expectations (see repository docs)
-- [ ] I have reviewed the repository conduct expectations (see repository docs)
-- [ ] My changes follow the repository's [content rules](../.cursor/rules/01_educational-content-rules.mdc)
-- [ ] I have checked for broken file references
-- [ ] I have verified YAML frontmatter (if applicable)
-- [ ] Code follows project standards (PEP 8 for Python in `src/` and notebooks)
-- [ ] I have verified file naming conventions
-- [ ] I have run markdownlint (if applicable)
-- [ ] I have tested my changes locally
+- [ ] Changes match the **Scope** in `README.md` (personal learning; not a production deliverable)
+- [ ] Content follows `.cursor/rules/01_educational-content-rules.mdc` (zero-copy, voice)
+- [ ] File references and relative links checked
+- [ ] Topic files use `NN_<slug>.md` in the correct folder (see `.cursor/rules/09_week-companion-architecture.mdc`)
+- [ ] Markdownlint run if I touched Markdown covered by CI
 
-### Content Quality
+### Content quality
 
-- [ ] Content is original and transformative (zero-copy policy)
-- [ ] Examples and diagrams are original
-- [ ] Preprocessing steps and assumptions are documented where non-obvious (if applicable)
-- [ ] Cross-references are updated
-- [ ] Documentation is updated (if structure changed)
+- [ ] Original synthesis; citations where I used specific external definitions
+- [ ] No references to internal-only staging material in public docs
+- [ ] Cross-references updated when I moved or renamed files
 
-### Seven-layer week bundles (if this PR touches scheduled week content)
+### Agent assets (if this PR touches `.github/skills/` or `.cursor/skills/`)
 
-- [ ] All seven step-numbered files in `weeks/weekN/` are present and aligned for the affected week(s) (see `.cursor/rules/09_week-companion-architecture.mdc`)
-- [ ] Sibling layers reviewed for concept alignment and links after changes
+- [ ] `.github/skills/` and `.cursor/skills/` are **byte-identical** (see `.github/skills/README.md`)
 
-### Code/Technical (if applicable)
+## Related issues
 
-- [ ] Code follows repository standards
-- [ ] Code is tested (if applicable)
-- [ ] No secrets or sensitive data included
-- [ ] Dependencies are documented
-
-## Related Issues
-
-Closes #(issue number)
+Closes #(issue number)  
 Related to #(issue number)
 
-## Screenshots/Examples (if applicable)
+## Additional notes
 
-Add screenshots, diagrams, or examples to help reviewers understand your changes.
-
-## Additional Notes
-
-Any additional information, context, or notes for reviewers.
+Context that helps review this change.
 
 ---
 
-**Note**: This repository is Swamy PKV's personal Data Preprocessing workspace (M.Sc. DSAI).
-
+**Note:** This repository is Swamy PKV’s personal Spec-Driven Development learning workspace.

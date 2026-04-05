@@ -1,8 +1,8 @@
 ---
 title: Cursor Rules Index
-version: 1.3
-last_updated: 2026-03-27
-project: Data Preprocessing (M.Sc. DSAI)
+version: 1.4
+last_updated: 2026-04-05
+project: Spec-Driven Development in Practice
 ---
 
 # Cursor Rules
@@ -16,35 +16,44 @@ This folder contains the Cursor rule files (`.mdc`) used to guide edits in this 
 
 ---
 
-## 📋 Rule Files
+## Rule files
 
 ### `01_educational-content-rules.mdc`
-Core principles, zero-copy policy, and seven-layer week companion overview (this repo)
+
+Core principles, zero-copy policy, voice, and Markdown conventions.
 
 ### `02_repository-structure.mdc`
-Repository structure expectations and key files
+
+Topic-folder layout and key files.
 
 ### `03_quality-assurance.mdc`
-Quality checklist and testing/verification expectations
+
+Quality checklist and verification expectations.
 
 ### `04_markdown-standards.mdc`
-Markdown and documentation standards
+
+Markdown and documentation standards.
 
 ### `05_primary-directives.mdc`
-Project focus and documentation accuracy rules
+
+Project focus and documentation accuracy rules.
 
 ### `06_source_material_rules.mdc`
-Rules for internal read-only staging (do not reference in public documentation)
+
+Rules for internal read-only staging (do not reference in public documentation).
 
 ### `07_file-naming-conventions.mdc`
-File naming conventions for this repository
+
+File naming conventions for topic folders.
 
 ### `08_copilot-instructions-extract.mdc`
-Key guidelines extracted from copilot-instructions.md for AI assistants
+
+Key guidelines extracted from `copilot-instructions.md` for AI assistants.
 
 ### `09_week-companion-architecture.mdc`
-Seven learning layers per week (DPP only), on-demand weeks, naming contract, migration SOP, quality gates, definition of done
+
+Topic unit architecture — on-demand folders, `NN_<slug>.md` naming, governance (file name is historical; content is SDD topic units).
 
 ---
 
-**Note**: Cursor automatically loads all `.mdc` files in `.cursor/rules/`.
+**Note:** Cursor automatically loads all `.mdc` files in `.cursor/rules/`.

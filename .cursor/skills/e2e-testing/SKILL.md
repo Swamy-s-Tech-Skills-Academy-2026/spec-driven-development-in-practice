@@ -1,40 +1,33 @@
 ---
 name: e2e-testing
-description: Smoke verification for the Data Preprocessing repo (environment, dependencies, notebook JSON, optional manual notebook run). Use when asked to smoke-test or validate the workspace end-to-end.
+description: Smoke verification for spec-driven-development-in-practice — Markdown lint and optional link check. Use when asked to smoke-test the workspace end-to-end.
 ---
 
-# Smoke / E2E-style verification — Data Preprocessing
+# Smoke verification — Markdown workspace
 
-There is no deployed web application in this repository. “End-to-end” here means **environment + parse + optional notebook execution**.
+There is no deployed application or Python package in this repository. “End-to-end” here means **documentation quality checks** that align with CI.
 
 ## Prerequisites
 
-- Python 3.12+ with **`uv`** at repo root
-- Optional: Jupyter for manual **Kernel → Restart & Run All**
+- **Node.js** 20.x for `markdownlint-cli2`
+- Optional: Docker for Lychee (see **ci-checks** skill)
 
 ## Suggested sequence
 
-1. **Dependencies**
+1. **Markdown lint (topics)** — same as `ci-documentation.yml`:
 
- ```powershell
- $Env:UV_LINK_MODE = "copy"
- uv sync
- ```
+   ```powershell
+   npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" "notes/**/*.md" "specs/**/*.md" "evals/**/*.md" "patterns/**/*.md" "experiments/**/*.md"
+   ```
 
-2. **Import smoke (optional)**
+2. **Markdown lint (agent docs)** — if skills, rules, or `CLAUDE.md` changed:
 
- ```powershell
- uv run python -c "import pandas, numpy, sklearn; print('ok')"
- ```
+   ```powershell
+   npx --yes markdownlint-cli2 "CLAUDE.md" ".cursor/skills.md" ".cursor/skills/**/*.md" ".github/skills/**/*.md"
+   ```
 
-3. **Notebook JSON** — same as CI / **ci-checks** skill:
-
- ```powershell
- uv run python -c "import json,glob; [json.load(open(p,encoding='utf-8')) for p in sorted(glob.glob('weeks/**/*.ipynb', recursive=True))]"
- ```
-
-4. **Manual (recommended for releases)** — open representative `weeks/weekN/04_notebook.ipynb`, run all cells top to bottom; confirm plots and outputs match intent.
+3. **Links (optional)** — run Lychee per **ci-checks** skill when a full link audit is requested.
 
 ## Summary
 
-Report each step **PASS** / **FAIL** / **SKIPPED** (e.g. skip manual run if not requested). Note any kernel or data-path issues explicitly.
+Report each step **PASS** / **FAIL** / **SKIPPED**. Note any glob paths with no matching files (expected until topic folders gain content).

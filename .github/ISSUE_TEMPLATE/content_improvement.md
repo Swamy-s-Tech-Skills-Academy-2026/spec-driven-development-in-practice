@@ -1,6 +1,6 @@
 ---
 name: Content Improvement
-about: Suggest improvements to existing content
+about: Suggest improvements to existing Markdown content
 title: '[CONTENT] '
 labels: enhancement, documentation
 assignees: ''
@@ -8,9 +8,9 @@ assignees: ''
 
 ## Description
 
-A clear description of the content improvement you're suggesting.
+A clear description of the improvement I am considering.
 
-## Content Location
+## Content location
 
 **File(s)**:
 
@@ -20,34 +20,27 @@ A clear description of the content improvement you're suggesting.
 
 - Section name or topic
 
-## Current Content
+## Current content
 
-What is the current content or explanation? (Quote or describe)
+What is there today? (short quote or summary)
 
-## Suggested Improvement
+## Suggested improvement
 
-What would you like to see changed or added?
+What should change and why?
 
 ## Rationale
 
-Why is this improvement valuable?
+- Clarity, correctness, stronger spec/eval linkage, better structure, etc.
 
-- Does it clarify a concept?
-- Does it fix an error?
-- Does it add missing information?
-- Does it improve learning flow?
+## Additional context
 
-## Additional Context
+- **Content type**: [notes / specs / evals / patterns / experiments / docs / Other]
+- **Related files**: cross-links or siblings to keep aligned
 
-- **Content Type**: [reading-notes / examples / notebooks / docs / src / Other]
-- **Component**: [Theory / Practice / Preprocessing experiments / Documentation / Other]
-- **Related Files**: Any related files or components
+## Examples (optional)
 
-## Examples (Optional)
-
-If you have examples, diagrams, or code snippets that would help, please include them.
+Diagrams, tables, or short excerpts that illustrate the improvement.
 
 ---
 
-**Note**: This repository is for Data Preprocessing (M.Sc. DSAI). Your suggestions help improve Swamy's learning workspace.
-
+**Note:** This repository is Swamy PKV’s personal Spec-Driven Development learning workspace.

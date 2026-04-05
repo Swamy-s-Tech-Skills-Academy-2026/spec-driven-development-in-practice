@@ -1,220 +1,153 @@
-# S.M.A.R.T. Prompt Framework for Coding Agents
+# S.M.A.R.T. prompt framework for coding agents
 
-**Data Preprocessing (M.Sc. DSAI) Edition** — Framework for creating high-quality coding agent instructions aligned with this repository's learning-workspace context.
+**Spec-Driven Development in Practice** — framework for writing high-quality agent instructions aligned with this Markdown learning workspace.
 
 ---
 
-## The S.M.A.R.T. Framework
+## The S.M.A.R.T. framework
 
 ```text
-S - Specific Role Definition (e.g., Senior Python Developer, Data Preprocessing Specialist)
-M - Mission-Critical Requirements (What must be accomplished with measurable outcomes)
-A - Audience-Aware Communication (Team expertise level, domain context)
-R - Response Format Control (Code structure, documentation style)
-T - Task-Oriented Constraints (Technology stack, forbidden actions)
+S — Specific role definition (e.g. SDD note author, spec reviewer)
+M — Mission-critical requirements (measurable outcomes)
+A — Audience-aware communication (here: personal learning, first-person)
+R — Response format control (headings, tables, Mermaid, file paths)
+T — Task-oriented constraints (Markdown-only repo, zero-copy, naming)
 ```
 
 ---
 
-## Data Preprocessing Repository Alignment
+## Repository alignment
 
 When creating prompts for this repo, consider:
 
-- **Prompt Pattern**: Is this instruction-based, role-based, chain-of-thought, or evaluation?
-- **Use Case Context**: What task type (reading-notes, examples, quizzes, notebooks, src utilities)?
-- **Seven-Layer Week Companion Architecture (DPP only)**: reading-notes → examples → quizzes → notebooks → model-papers → discussion-prompts → assignments. Weeks are added **on demand** (no pre-scaffolding). Same `XX_` + topic slug across all seven for each week in the repo; see `.cursor/rules/09_week-companion-architecture.mdc`. Other repos may differ.
-- **Template Reusability**: Can this prompt be templated for reuse across topics (e.g., weeks 01–08)?
+- **Pattern**: instruction-following, role-based, chain-of-thought, or evaluation-style task?
+- **Location**: which topic folder (`specs/`, `evals/`, `patterns/`, `notes/`, `experiments/`, `docs/`)?
+- **Topic units**: files are **`NN_<slug>.md`**, folders created **on demand** — see `.cursor/rules/09_week-companion-architecture.mdc`.
+- **Reusability**: can the prompt template apply to multiple future topic files without assuming fixed week numbers or code paths?
 
 ---
 
-## Problem Statement Template
-
-Use this template for coding agent tasks:
+## Problem statement template
 
 ```markdown
 ## ROLE DEFINITION
 
-You are a [Specific Role] specializing in [Technology Stack] with expertise in [Domain Areas]
+You are a [specific role] helping refine [SDD concept / spec / eval design] in a Markdown-only personal learning repo.
 
 ## MISSION
 
-[Clear, specific objective with measurable outcomes]
+[Clear objective with measurable outcomes]
 
 ## CONTEXT
 
-[Brief overview of current situation and progress made]
+[Brief situation — what exists today, what I am trying to clarify]
 
 ## CURRENT STATUS
 
-- **Progress Made**: [Specific achievements and metrics]
-- **Main Issue**: [Root cause analysis]
-- **Files Affected**: [List specific files]
+- **Progress**: [what is already captured in which files]
+- **Main gap**: [what is missing or inconsistent]
+- **Files**: [concrete paths]
 
 ## REMAINING WORK
 
-### 1. [Priority Task Name] (Priority N)
+### 1. [Task] (priority)
 
-- **Problem**: [Specific technical issue]
-- **Current Error**: [Exact error messages]
-- **Solution Approach**: [Concrete implementation steps]
-- **Files to Modify**: [Specific file paths]
+- **Problem**: …
+- **Approach**: …
+- **Files to touch**: …
 
-## TECHNICAL CONSTRAINTS
+## CONSTRAINTS
 
-- **CRITICAL**: [Non-negotiable requirements]
-- **Framework**: [Technology stack requirements]
-- **Dependencies**: [Package/version constraints]
-
-## WHAT NOT TO DO
-
-- [Explicit forbidden actions with reasoning]
-
-## WHAT TO DO
-
-- [Explicit required actions with priority]
+- **CRITICAL**: Markdown-only; no new runtime code unless I explicitly ask.
+- **CRITICAL**: Zero-copy — original synthesis; cite definitions.
+- **CRITICAL**: Personal-learning voice; no course or tutorial framing for a general audience.
+- **Naming**: `NN_<slug>.md` in the correct topic folder.
 
 ## SUCCESS CRITERIA
 
-[Measurable outcomes with acceptance criteria]
+[Checkable outcomes — e.g. spec has acceptance checks, links resolve, markdownlint passes]
 ```
 
 ---
 
-## Data Preprocessing S.M.A.R.T. Example
+## S.M.A.R.T. example (SDD)
 
 ```markdown
-ROLE: You are a Senior Python Developer specializing in data preprocessing, pandas,
-scikit-learn, and reproducible data pipelines for the M.Sc. DSAI learning workspace.
+ROLE: You are helping me refine a behavior spec and its eval hooks in my personal SDD notes repo.
 
-MISSION: Add a preprocessing notebook for Week 03 (Data Quality and Issues) in
-t1-data-preprocessing - load a sample dataset, detect missing values and outliers,
-apply cleaning steps, and document why each step is applied.
+MISSION: In specs/02_ingestion-guardrails.md (create on demand), write a spec for an LLM step
+that classifies user tickets into priority buckets, including forbidden behaviors and a small
+golden set of expected labels.
 
-AUDIENCE: Swamy PKV (personal learning workspace) with:
-- Basic Python, pandas, and Jupyter
-- Familiarity with data quality concepts (MCAR, MAR, MNAR)
-- Interest in reproducible preprocessing for ML
+CONTEXT: I am exploring how tight specs reduce variance before I touch any implementation.
 
-RESPONSE FORMAT:
-- Jupyter notebook: weeks/weekN/04_notebook.ipynb naming
-- Markdown cells explaining the preprocessing concept before code
-- Clear flow: Context -> Data setup -> Clean/Transform -> Validate -> Reflect
-- Comments explaining the *why* of each preprocessing step
-- Reproducible (seeds, pathlib, no hardcoded paths)
+AUDIENCE: Myself only — first person, reflection-friendly, no “students” or generic tutorial voice.
 
-TASK CONSTRAINTS:
-- CRITICAL: Zero-copy policy - original synthesis only
-- CRITICAL: No hardcoded absolute paths (use pathlib/relative)
-- Seven-layer week companions (DPP): reading-notes -> examples -> quizzes ->
- notebooks -> model-papers -> discussion-prompts -> assignments (aligned XX_ + slug; weeks on demand)
-- Tech Stack: Python 3.12+, pandas, scikit-learn, matplotlib, seaborn, Jupyter
+FORMAT:
+- Use ## / ### headings per repo standards.
+- Include a short table of inputs vs expected outputs for the golden set.
+- Call out temperature / tool choices if they affect determinism.
+
+CONSTRAINTS:
+- Zero-copy: no pasted vendor or course text.
+- File naming: if this is the second spec file, use 02_ with a kebab-case slug; adjust if the folder already has numbering.
+- Do not reference internal read-only staging folders in the prose.
 ```
 
 ---
 
-## Effective Instruction Patterns
+## Effective instruction patterns
 
-### DO — Be Specific and Explicit
+### Strong (specific)
 
-- "Add a preprocessing notebook for week 03 covering outlier detection with IQR and Z-score"
-- "Update `weeks/week2/03_quiz.md` to add five new original multiple-choice questions"
-- "Fix broken cross-references in week 04's seven companion files under `weeks/week4/`"
+- “Add `evals/01_regression-suite-outline.md` describing three metrics and when to rerun the suite.”
+- “Tighten the acceptance criteria in `specs/01_prompt-contract-template.md` so each bullet is testable.”
+- “Fix broken relative links between `notes/01_sdd-foundations.md` and `patterns/01_spec-first-pattern.md`.”
 
-### DON'T — Be Vague
+### Weak (vague)
 
-- "Fix the notebook"
-- "Make it work"
-- "Update the content"
+- “Improve the docs.”
+- “Make the spec better.”
 
-### Strong Constraint Language That Works
+### Constraint language that matches this repo
 
 ```markdown
-CRITICAL: Zero-copy policy — original synthesis only; no copy-paste from source material.
-CRITICAL: Do not modify, overwrite, or delete anything in source-material/.
-CRITICAL: All seven layers for a week must share the same XX_ prefix and topic slug.
-```
-
-### Weak Language That Doesn't Work
-
-```markdown
-Please try to keep notes original.
-Prefer maintaining the naming convention.
+CRITICAL: Zero-copy — original synthesis; cite sources for definitions.
+CRITICAL: Swamy-only scope — do not reframe as shared courseware.
+CRITICAL: On-demand files — do not create empty topic stubs.
 ```
 
 ---
 
-## Prompt Design Patterns
+## Integration checklist
 
-### Multi-Layered Prompt Architecture
+### Repository development
 
-```markdown
-SYSTEM LAYER:
-You are a [Specialist Role] with expertise in [Technology Stack] and [Domain Expertise].
+- [ ] Correct topic folder for the content type
+- [ ] `NN_<slug>.md` naming; no `00_`
+- [ ] First-person learning voice where appropriate
+- [ ] Internal links resolve
 
-CONTEXT LAYER:
-[Project context, current situation, repository conventions]
+### Specs and evals
 
-TASK LAYER:
-[Specific implementation task with clear deliverables]
+- [ ] Specs state observable success / failure
+- [ ] Eval notes tie metrics or reviews to those specs
+- [ ] Determinism and variance called out when relevant
 
-SPECIFICATION LAYER:
-[Detailed technical requirements, constraints, and acceptance criteria]
-```
+### Quality validation
 
-### Progressive Refinement Pattern
-
-```markdown
-BASE PROMPT: [Core role and task definition]
-REFINEMENT 1: Add specific technical constraints
-REFINEMENT 2: Define output format requirements
-REFINEMENT 3: Include quality standards and acceptance criteria
-FINAL VALIDATION: Ensure all constraints are explicitly stated
-```
+- [ ] `markdownlint-cli2` on globs in `ci-documentation.yml` (see **ci-checks** skill)
+- [ ] No internal-only path names in public-facing Markdown
 
 ---
 
-## Data Preprocessing Integration Checklist
+## Best practices summary
 
-### Repository Development
-
-- [ ] Follow seven-layer week companion architecture (DPP only)
-- [ ] Use first-person learning journey voice (zero-copy policy)
-- [ ] Define concepts before code; use LaTeX for formulas where relevant
-- [ ] Verify seven-layer parity across all layers in `weeks/weekN/`
-
-### Notebooks (preprocessing experiments)
-
-- [ ] Naming: `weeks/weekN/04_notebook.ipynb`
-- [ ] Flow: Context -> Data setup -> Cleaning/transformation -> Validation -> Reflection
-- [ ] Comment the *why* of each preprocessing step; use pandas/scikit-learn
-- [ ] Random seeds set; no hardcoded paths
-
-### Examples and Quizzes
-
-- [ ] Worked examples in `weeks/weekN/02_examples.md`
-- [ ] Quizzes in `weeks/weekN/03_quiz.md`
-- [ ] Original scenarios and questions only; cite specific definitions
-
-### Quality Validation
-
-- [ ] `uv run black --check src/` and `uv run isort --check-only src/` pass
-- [ ] Notebook JSON parses successfully
-- [ ] Markdownlint passes on configured globs
-- [ ] No `source-material/` references in public docs
-- [ ] Seven-layer parity for all in-scope weeks
+1. Name the folder and file pattern explicitly.
+2. Separate **what** (behavior) from **how I will check it** (eval).
+3. Use strong CRITICAL lines for zero-copy and personal-scope rules.
+4. Prefer small, checkable edits over vague “polish everything” asks.
 
 ---
 
-## Best Practices Summary
-
-1. **Be Specific**: Define exact roles, technologies, and constraints
-2. **Set Clear Boundaries**: Use strong constraint language
-3. **Define Success**: Include measurable outcomes and validation steps
-4. **Control Output**: Specify exactly what format and quality you expect
-5. **Validate Everything**: Include CI-aligned build and lint requirements
-6. **Align with Architecture**: Reference seven-layer week companion model
-7. **Document Thoroughly**: Ensure all decisions and constraints are recorded
-
----
-
-**Related**: `.github/copilot-instructions.md`, `.cursor/rules/09_week-companion-architecture.mdc`, `.github/skills/`
+**Related:** `.github/copilot-instructions.md`, `.cursor/rules/09_week-companion-architecture.mdc`, `.github/skills/`

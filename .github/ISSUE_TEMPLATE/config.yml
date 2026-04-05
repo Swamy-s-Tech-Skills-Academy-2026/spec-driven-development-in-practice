@@ -1,9 +1,8 @@
 blank_issues_enabled: false
 contact_links:
-  - name: 💬 Discussions
-    url: https://github.com/msc-dsai-swamypkv-practice/t1-data-preprocessing/discussions
-    about: Ask questions, share ideas, or discuss the Data Preprocessing learning workspace
-  - name: 📚 Documentation
-    url: https://github.com/msc-dsai-swamypkv-practice/t1-data-preprocessing#readme
-    about: Check the README and documentation for more information
-
+  - name: Discussions
+    url: https://github.com/Swamy-s-Tech-Skills-Academy-2026/spec-driven-development-in-practice/discussions
+    about: Optional conversation space for this repository (personal learning scope)
+  - name: README
+    url: https://github.com/Swamy-s-Tech-Skills-Academy-2026/spec-driven-development-in-practice#readme
+    about: Repository purpose, scope, and structure

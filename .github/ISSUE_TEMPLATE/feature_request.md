@@ -1,6 +1,6 @@
 ---
 name: Feature Request
-about: Suggest a new feature or enhancement
+about: Suggest new learning content or repository improvement
 title: '[FEATURE] '
 labels: enhancement
 assignees: ''
@@ -8,51 +8,38 @@ assignees: ''
 
 ## Description
 
-A clear description of the feature you'd like to see added.
+A clear description of what I want to add or change.
 
-## Feature Type
+## Feature type
 
-- [ ] New week companion files (`weeks/weekN/`)
-- [ ] New Python Module (`src/`)
-- [ ] Documentation Improvement
+- [ ] New or expanded Markdown in topic folders (`notes/`, `specs/`, `evals/`, `patterns/`, `experiments/`)
+- [ ] Meta-documentation (`docs/`, `README.md`)
+- [ ] Automation or agent configuration (`.github/`, `.cursor/`)
 - [ ] Other (please describe)
 
 ## Motivation
 
-Why is this feature valuable?
+Why this matters for my learning goals.
 
-- What problem does it solve?
-- How does it improve the learning workspace?
+## Detailed description
 
-## Detailed Description
+- **Concept**: theory or definitions I want captured
+- **Structure**: proposed folder and `NN_<slug>.md` name
+- **Links**: related files already in the repo
 
-Describe the feature in terms of:
+## Proposed location
 
-- **Theory**: New or expanded concepts (reading-notes)
-- **Practice**: Worked examples or exercises (examples)
-- **Experiments**: Preprocessing pipelines or visualizations (notebooks)
-- **Utilities**: Reusable code (src/)
+- `notes/` / `specs/` / `evals/` / `patterns/` / `experiments/` / `docs/` — specify path
 
-## Proposed Location
+## Related content
 
-Where should this feature be implemented?
+- Files or topics this builds on
+- Dependencies (none expected for Markdown-only work)
 
-- `weeks/weekN/` (week companion files)
-- `src/` (reusable utilities)
-- `docs/` (documentation)
-- Specific file or folder
+## Additional context
 
-## Related Content
-
-- Does this relate to existing features?
-- What dependencies are needed?
-- What does this enable?
-
-## Additional Context
-
-Any other information, examples, or references that would help.
+Any other information that helps scope the work.
 
 ---
 
-**Note**: This repository is Swamy PKV's personal Data Preprocessing workspace (M.Sc. DSAI).
-
+**Note:** This repository is Swamy PKV’s personal Spec-Driven Development learning workspace.

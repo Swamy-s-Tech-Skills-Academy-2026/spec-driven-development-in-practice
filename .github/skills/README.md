@@ -30,11 +30,11 @@ Get-ChildItem $cRoot -Recurse -Filter SKILL.md | ForEach-Object {
 
 | Folder | Purpose |
 |--------|---------|
-| `data-preprocessing` | Domain context — this repo (seven layers incl. discussion-prompts + assignments; weeks on demand) |
-| `week-companions` | Seven-layer week parity, migration SOP, definition of done, tracker (append rows as weeks start) |
-| `ci-checks` | Local commands aligned with `.github/workflows/ci-*.yml` |
-| `docs-verification` | Companion links, layout, and naming vs `docs/01_repository-structure.md` |
-| `workspace-review` | Full audit checklist for this educational repo |
-| `e2e-testing` | Smoke checks (env, notebook parse, optional manual notebook run) |
+| `sdd-learning` | Domain context for this repo — topic folders, SDD focus, zero-copy, voice |
+| `topic-units` | On-demand topic layout, `NN_<slug>.md` naming, governance checks |
+| `ci-checks` | Local commands aligned with `.github/workflows/ci-documentation.yml` (and agent-docs lint job) |
+| `docs-verification` | Structure, naming, and link sanity vs `README.md` / `CLAUDE.md` / rule `09` |
+| `workspace-review` | Full audit checklist for this Markdown learning workspace |
+| `e2e-testing` | Smoke checks — markdownlint (+ optional Lychee) |
 
-**Note:** Skills that lived only under `source-material/.github/skills` or `source-material/.cursor/skills` are **staging copies**. The live skills for automation and agents are **only** the mirrored trees at the repo root (this folder and `.cursor/skills/`).
+**Note:** The live skills for automation and agents are the mirrored trees at the repo root (this folder and `.cursor/skills/`).
