@@ -4,6 +4,5 @@
 cache = true
 max_cache_age = "1d"
 
-[lychee]
+# Treat common success and redirect codes as valid when checking HTTP(S) links.
 accept = ["200", "206", "301", "302", "308"]
-exclude_mail = true
