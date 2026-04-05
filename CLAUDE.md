@@ -67,6 +67,7 @@ Optional link check: `docker run --rm -v "${PWD}:/workspace" -w /workspace lyche
 | `.github/prompts/smart-prompt-framework-guide.md` | S.M.A.R.T. prompt framework |
 | `.github/workflows/ci-skills-parity.yml` | Verifies `.github/skills` ↔ `.cursor/skills` mirror on changes |
 | `.github/workflows/ci-agent-docs-guard.yml` | Validates CLAUDE.md, .cursor rules, and key file references |
+| `.markdownlint-cli2.yaml` | Markdownlint-CLI2 rules (line length, headings, front matter for skills) |
 
 ## SDD topic reference
 

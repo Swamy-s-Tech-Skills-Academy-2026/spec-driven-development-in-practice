@@ -89,7 +89,7 @@ Files within each folder use two-digit kebab-case numbered names: `01_spec-first
 
 ## CI Checks
 
-Markdown lint (aligns with `ci-documentation.yml`):
+Markdown lint (aligns with `ci-documentation.yml`). Rules: **`.markdownlint-cli2.yaml`** at the repository root (loaded automatically by `markdownlint-cli2`).
 
 ```powershell
 npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" "notes/**/*.md" "specs/**/*.md" "evals/**/*.md" "patterns/**/*.md" "experiments/**/*.md"

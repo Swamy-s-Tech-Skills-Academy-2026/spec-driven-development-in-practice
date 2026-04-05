@@ -2,6 +2,8 @@
 
 Bundled procedures live under `.github/skills/` as `SKILL.md` files (YAML frontmatter + Markdown body). The same tree is mirrored at `.cursor/skills/`; parity is checked in CI when those paths change.
 
+Markdown lint for this repository uses **`.markdownlint-cli2.yaml`** at the repo root (including a `frontMatter` pattern so skill files lint correctly).
+
 ## Why skills exist
 
 Skills give assistants **progressive disclosure**: match a task to a small bundle instead of loading every rule file. They complement `CLAUDE.md`, `.cursor/rules/*.mdc`, and `.github/copilot-instructions.md`.

@@ -11,13 +11,13 @@
 
 ---
 
-## 📌 Purpose
+## Purpose
 
 This repository is a **learning-focused space** to explore and understand **Spec-Driven Development (SDD)** and its role in building **deterministic AI systems**.
 
 ---
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 This repository reflects **my personal learning journey and evolving understanding** of Spec-Driven Development (SDD).
 
@@ -25,38 +25,38 @@ This repository reflects **my personal learning journey and evolving understandi
 - Content may evolve, change, or be refined over time
 - Some ideas represent **experiments, interpretations, or early-stage thinking**
 
-👉 Treat this as a **learning log, not a finalized framework**
+Treat this as a **learning log, not a finalized framework**.
 
 ---
 
-## 🧠 What This Repository Covers
+## What this repository covers
 
-- Fundamentals of Spec-Driven Development (SDD)  
-- Spec-first design thinking  
-- Deterministic AI system concepts  
-- Evaluation-driven development (eval loops)  
-- Prompt and behavior specification ideas  
-- Notes, insights, and evolving understanding  
-
----
-
-## ⚙️ Scope
-
-This is **NOT a production project**.
-
-- ❌ No polished implementations  
-- ❌ No end-to-end systems  
-- ❌ No deployment or infrastructure focus  
-
-👉 This repository is strictly for:
-
-- Learning  
-- Exploration  
-- Concept building  
+- Fundamentals of Spec-Driven Development (SDD)
+- Spec-first design thinking
+- Deterministic AI system concepts
+- Evaluation-driven development (eval loops)
+- Prompt and behavior specification ideas
+- Notes, insights, and evolving understanding
 
 ---
 
-## 🏗️ Repository Structure (Evolving)
+## Scope
+
+This is **not** a production project.
+
+- No polished implementations
+- No end-to-end systems
+- No deployment or infrastructure focus
+
+This repository is strictly for:
+
+- Learning
+- Exploration
+- Concept building
+
+---
+
+## Repository structure (evolving)
 
 ```text
 /specs           # Behavior specifications and prompt contracts
@@ -69,7 +69,7 @@ This is **NOT a production project**.
 
 ---
 
-## 🎯 Goal
+## Goal
 
 To build a strong foundation in **Spec-Driven Development**, enabling the design of:
 
@@ -79,24 +79,24 @@ To build a strong foundation in **Spec-Driven Development**, enabling the design
 
 ---
 
-## 🚀 Related Work
+## Related work
 
 Production-grade implementations based on these learnings will be published in **separate repositories**.
 
 ---
 
-## 📖 Status
+## Status
 
-🚧 Work in Progress — continuously evolving as understanding deepens.
+Work in progress — continuously evolving as understanding deepens.
 
 ---
 
-## 🤝 Contributions
+## Contributions
 
 This repository is for my personal learning. I do not treat it as shared courseware or a collaboration surface for others.
 
 ---
 
-## 📜 License
+## License
 
 MIT License

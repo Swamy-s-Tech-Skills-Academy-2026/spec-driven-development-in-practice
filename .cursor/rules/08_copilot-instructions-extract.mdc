@@ -37,7 +37,7 @@ Files in each topic folder use `NN_<slug>.md` naming (`01_`, `02_`, …). Folder
 
 ## Environment and commands
 
-No Python environment required. CI is Markdown-only:
+No Python environment required. CI is Markdown-only. Markdownlint rules: **`.markdownlint-cli2.yaml`** at the repo root.
 
 ```bash
 npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" "notes/**/*.md" "specs/**/*.md" "evals/**/*.md" "patterns/**/*.md" "experiments/**/*.md"

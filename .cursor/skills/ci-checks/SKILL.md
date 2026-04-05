@@ -7,6 +7,8 @@ description: Run CI-aligned Markdown quality checks locally for spec-driven-deve
 
 Commands mirror `.github/workflows/ci-documentation.yml` and the Markdown guard job in `.github/workflows/ci-agent-docs-guard.yml`.
 
+Repo-wide Markdown rules live in **`.markdownlint-cli2.yaml`** at the repository root; `markdownlint-cli2` loads it automatically when run from that directory.
+
 ## Policy
 
 - **Quality expectations:** `.cursor/rules/03_quality-assurance.mdc`, `.github/copilot-instructions.md`.
