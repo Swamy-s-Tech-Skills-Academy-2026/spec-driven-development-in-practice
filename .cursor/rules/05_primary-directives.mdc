@@ -1,37 +1,39 @@
 ---
-description: Primary directives for Data Preprocessing
+description: Primary directives for Spec-Driven Development in Practice
 globs: *
 ---
 # Primary Directives
 
 ## Project Focus
 
-This is an **Academic Learning Workspace** for Data Preprocessing that:
-- Implements data cleaning, transformation, and pipeline concepts in Python
-- Provides clear, structured notes in Markdown
-- Uses Jupyter Notebooks for interactive learning
-- Prioritizes clarity and reproducibility
+This is **Swamy PKV's personal learning workspace** for Spec-Driven Development (SDD):
 
-### Educational Philosophy
-- **Educational first**: Prioritize clarity, correctness, and explainability over performance.
-- **From scratch mindset**: Avoid heavy abstractions; keep logic explicit and inspectable.
-- **Document intent**: Update docs when structure, behavior, or learning flow changes.
-- **Seven-layer week bundles (this repo)**: For each **week in the repo**, seven aligned artifacts in `weeks/weekN/` (`01_reading-notes.md` through `07_assignment.md`) when that week is complete (see [09_week-companion-architecture.mdc](./09_week-companion-architecture.mdc)). New weeks are added **on demand** — no pre-scaffolding. Reusable code stays in `src/` only — not mixed in as a substitute layer.
+- Exploring spec-first design thinking
+- Studying deterministic AI system concepts
+- Building intuition for evaluation-driven development (eval loops)
+- Synthesizing prompt engineering and behavior specification ideas
+
+### Learning Philosophy
+
+- **Learning first**: Prioritize clarity, synthesis, and personal understanding over completeness.
+- **Exploration mindset**: Not everything needs to be finished; experiments are valid half-done.
+- **Document intent**: Capture the *why* behind ideas, not just what was learned.
+- **On-demand folders**: Create topic folders and files only when work on that topic begins.
 
 ## Current State
 
-- ✅ Term 1 Complete: All 8 weeks migrated and reviewed
-- ✅ Tech Stack: Python, Jupyter, NumPy, Pandas, Matplotlib, Seaborn (and course-relevant libraries)
-- ❌ NOT a Web Application: No Flask, Django, or React.
-- ❌ NOT a Production System: Code is for educational and practice purposes.
+- Work in progress — continuously evolving as understanding deepens
+- No Python code, no Jupyter notebooks, no build system
+- Pure Markdown notes and exploration
 
 ## Documentation Accuracy
 
-- Notes must accurately reflect preprocessing concepts and best practices.
-- Code comments should explain the *why* of the operation, not just the *how* of the Python code.
+- Notes must reflect Swamy's current understanding (they can evolve).
+- Do not write as if producing authoritative reference material.
 
-## Code Maintenance
+## Not This
 
-- Notebooks should be reproducible (Restart Kernel & Run All should work).
-- Separate reusable logic into `src/` modules where appropriate.
-- Use strict typing in Python scripts (`src/`) but relax it in Notebooks for exploration.
+- NOT a web application
+- NOT a production system
+- NOT a shared course or tutorial
+- NOT a polished framework

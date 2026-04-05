@@ -1,32 +1,28 @@
 ---
-description: Repository structure for Data Preprocessing
+description: Repository structure for Spec-Driven Development in Practice
 globs: *
 ---
 # Repository Structure
 
-**Project**: Data Preprocessing (M.Sc. DSAI)
+**Project**: Spec-Driven Development in Practice
 
-> **📖 Single Source of Truth**: For the complete and detailed repository structure, naming conventions, and workflow standards, please refer to [docs/01_repository-structure.md](../../docs/01_repository-structure.md).
+> **Single Source of Truth**: For the complete and detailed repository structure, please refer to [docs/01_repository-structure.md](../../docs/01_repository-structure.md) when it exists.
 
 ## Quick Summary
 
-**Seven learning layers** (week companions — **this repo only** — see [09_week-companion-architecture.mdc](./09_week-companion-architecture.mdc)):
+All content lives in **topic folders** created on demand:
 
-All eight weeks live under `weeks/week1/` through `weeks/week8/` with step-numbered filenames:
+| Folder | Purpose |
+|--------|---------|
+| `notes/` | Theory, insights, evolving understanding |
+| `specs/` | Behavior specifications and prompt contracts |
+| `evals/` | Evaluation strategies and eval loop designs |
+| `patterns/` | SDD patterns and reusable practices |
+| `experiments/` | Small experiments and iterations |
+| `docs/` | Meta-documentation and guides |
 
-- `01_reading-notes.md` — Theory (first-person learning journey)
-- `02_examples.md` — Practice (worked scenarios)
-- `03_quiz.md` — Self-assessment (original synthesis only)
-- `04_notebook.ipynb` — Preprocessing experiments
-- `05_model-paper.md` — Model exam papers / answers
-- `06_discussion.md` — Week-scoped discussion / reflection prompts
-- `07_assignment.md` — Week-scoped structured deliverables
+Files within each folder: `01_<slug>.md`, `02_<slug>.md`, … (kebab-case, no `00_` prefix).
 
-Trimester-level extras: `weeks/assignments/` (graded assignment) and `weeks/model-papers/` (comprehensive papers).
+**No pre-scaffolding** — create folders and files only when work begins.
 
-**Not layers** (utilities only):
-
-- **`src/`**: Reusable library code imported by notebooks
-- **`tools/`**: Maintenance scripts (PowerShell, Python)
-
-When writing or updating public-facing structure (e.g. docs/01_repository-structure.md, README), do not list or mention any internal-only paths.
+When writing or updating public-facing structure (e.g. `README.md`, `docs/`), do not list or mention any internal-only paths.

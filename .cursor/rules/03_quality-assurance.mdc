@@ -1,44 +1,27 @@
 ---
-description: Quality assurance standards for code and notebooks
-globs: *.py, *.ipynb
+description: Quality assurance standards for notes and documentation
+globs: *.md
 ---
 # Quality Assurance
 
-## Code Quality Checklist
+## Content Quality Checklist
 
-### Python Scripts (`src/`)
-- [ ] Follows PEP 8 style guide.
-- [ ] Type hints used for function arguments and return types.
-- [ ] Docstrings included for all functions and classes.
-- [ ] No hardcoded paths (use `pathlib` or relative paths).
+### Markdown Files
 
-### Jupyter Notebooks (`weeks/weekN/04_notebook.ipynb`)
-- [ ] **Kernel Restart & Run All** passes without errors.
-- [ ] **Conceptual flow** aligns with week policy: Context → Data setup → Cleaning/transformation → Validation → Reflection (see [09_week-companion-architecture.mdc](./09_week-companion-architecture.mdc)).
-- [ ] Titles/headings match the same **week + topic slug** family as the **other six** learning layers (seven total).
-- [ ] No hidden state (variables defined in deleted cells).
-- [ ] Markdown cells clearly explain the steps.
-- [ ] Visualizations have titles, labels, and legends.
-
-## Data Validation
-- [ ] Check for missing values in datasets.
-- [ ] Verify assumptions before applying transformations or analyses.
+- [ ] Follows naming convention: `NN_<slug>.md` (kebab-case, two-digit prefix, no `00_`).
+- [ ] No hardcoded external links that may break.
+- [ ] Mermaid diagrams use the standard colour convention from rule `01`.
+- [ ] All Mermaid blocks are valid and render cleanly.
 
 ## Content Review Checklist (Zero-Copy)
-- [ ] **Originality Check**: Verify that text is not a direct copy from source material.
-- [ ] **Synthesis**: Ensure content represents a synthesized understanding, not just rephrasing.
-- [ ] **Citations**: Check that definitions and specific claims are cited.
 
-## Week companion parity (seven layers, this repo)
-
-When changing any week’s content, verify:
-
-- [ ] **Naming gate**: `XX_` + shared `<slug>` + correct suffix per layer ([07_file-naming-conventions.mdc](./07_file-naming-conventions.mdc)).
-- [ ] **Parity gate**: All **seven** layers exist for that week (or documented WIP / transitional backlog per rule `09`).
-- [ ] **Link gate**: Cross-links between the seven files for that week still resolve after edits.
+- [ ] **Originality Check**: Verify that text is not a direct copy from reference material.
+- [ ] **Synthesis**: Ensure content represents synthesized understanding, not rephrasing.
+- [ ] **Citations**: Check that specific definitions and claims are cited.
+- [ ] **Voice**: First-person learning journey; no instructor or "course" framing.
 
 ## Documentation Quality
-- README.md must match actual implementation.
-- Usage guides must be accurate.
-- Code comments explain complex logic and concepts (Code Comments Philosophy).
-- Formulas or key steps correctly formatted (LaTeX in notebooks where relevant).
+
+- `README.md` must match actual repo content.
+- Notes must accurately reflect SDD concepts and Swamy's current understanding.
+- Comments in any incidental code explain the *why*, not just the *how*.
