@@ -1,0 +1,22 @@
+---
+description: This repo is Swamy's personal learning only — not for others as courseware
+globs: *
+alwaysApply: true
+---
+
+# Swamy-only personal learning
+
+This repository (`spec-driven-development-in-practice`) is **Swamy PKV's personal learning workspace**.
+
+1. **Only Swamy's learning** — artifacts support his exploration of Spec-Driven Development and deterministic AI; they are not institutional or third-party curriculum.
+2. **Not for anyone else** — do not edit copy to welcome a general audience, imply shared courseware, or invite others to treat this as tutorials, templates, or authoritative reference material.
+
+## Do
+
+- Keep `README.md` **Scope** accurate and visible in spirit across public docs.
+- Use first-person / Swamy's voice in reading notes as already governed by educational rules.
+
+## Do not
+
+- Soften or remove the personal-only stance unless Swamy explicitly requests it.
+- Replace "Swamy only" framing with "students," "learners," or open-education language.

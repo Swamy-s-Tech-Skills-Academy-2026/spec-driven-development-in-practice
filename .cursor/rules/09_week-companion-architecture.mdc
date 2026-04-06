@@ -1,0 +1,72 @@
+---
+description: Topic unit architecture for Spec-Driven Development in Practice — on-demand folders, naming contract, governance
+globs: *
+---
+# Topic Unit Architecture (Spec-Driven Development in Practice)
+
+**Project**: Spec-Driven Development in Practice
+**Scope**: This naming and governance contract applies to **`spec-driven-development-in-practice` only**.
+
+This rule governs how learning content is organized. For naming patterns, see [07_file-naming-conventions.mdc](./07_file-naming-conventions.mdc). For zero-copy and voice, see [01_educational-content-rules.mdc](./01_educational-content-rules.mdc).
+
+---
+
+## 1. Objectives
+
+1. **On-demand creation**: Create folders and files only when starting work on that topic — never pre-scaffold.
+2. **Consistent naming**: All files use `NN_<slug>.md` (two-digit prefix, kebab-case slug).
+3. **Separation of concerns**: Learning notes, specs, evals, patterns, and experiments stay in their respective folders.
+
+---
+
+## 2. Topic folders
+
+| Folder | Purpose | Example file |
+|--------|---------|--------------|
+| `notes/` | Theory, foundations, evolving understanding | `01_sdd-foundations.md` |
+| `specs/` | Behavior specifications, prompt contracts | `01_prompt-contract-template.md` |
+| `evals/` | Evaluation strategies, eval loop designs | `01_eval-loop-design.md` |
+| `patterns/` | SDD patterns and reusable practices | `01_spec-first-pattern.md` |
+| `experiments/` | Small experiments and iteration notes | `01_first-spec-experiment.md` |
+| `docs/` | Meta-documentation and guides | `01_repository-structure.md` |
+
+---
+
+## 3. SDD topic reference
+
+| Topic area | Slug family |
+|------------|------------|
+| Spec-first design | `spec-first-*` |
+| Eval-driven development | `eval-*` |
+| Prompt engineering | `prompt-*` |
+| Deterministic AI | `deterministic-*` |
+| LLM pipelines | `llm-pipeline-*` |
+
+**Extending to new topics**: Add a row above, create files on demand, update this table and `CLAUDE.md` in the same pass.
+
+---
+
+## 4. Naming contract
+
+- **Prefix**: Two-digit number (`01_`, `02_`, …). Never `00_`.
+- **Slug**: Kebab-case, descriptive (e.g. `eval-loop-design`).
+- **Extension**: `.md` for all notes, specs, evals, patterns, and experiments.
+
+---
+
+## 5. Core governance rules
+
+1. **On demand**: Create files and folders only when you start working on that topic.
+2. **No empty placeholders**: Do not create stub files with no content.
+3. **No cross-folder duplication**: Each item belongs in exactly one folder.
+
+---
+
+## 6. Quality gates
+
+| Gate | Check |
+|------|-------|
+| **Naming** | `NN_<slug>.md` in correct folder |
+| **Content integrity** | Zero-copy / citations |
+| **Links** | Internal links resolve |
+| **Voice** | First-person; no instructor framing |

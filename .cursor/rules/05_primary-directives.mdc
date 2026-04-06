@@ -1,0 +1,39 @@
+---
+description: Primary directives for Spec-Driven Development in Practice
+globs: *
+---
+# Primary Directives
+
+## Project Focus
+
+This is **Swamy PKV's personal learning workspace** for Spec-Driven Development (SDD):
+
+- Exploring spec-first design thinking
+- Studying deterministic AI system concepts
+- Building intuition for evaluation-driven development (eval loops)
+- Synthesizing prompt engineering and behavior specification ideas
+
+### Learning Philosophy
+
+- **Learning first**: Prioritize clarity, synthesis, and personal understanding over completeness.
+- **Exploration mindset**: Not everything needs to be finished; experiments are valid half-done.
+- **Document intent**: Capture the *why* behind ideas, not just what was learned.
+- **On-demand folders**: Create topic folders and files only when work on that topic begins.
+
+## Current State
+
+- Work in progress — continuously evolving as understanding deepens
+- No Python code, no Jupyter notebooks, no build system
+- Pure Markdown notes and exploration
+
+## Documentation Accuracy
+
+- Notes must reflect Swamy's current understanding (they can evolve).
+- Do not write as if producing authoritative reference material.
+
+## Not This
+
+- NOT a web application
+- NOT a production system
+- NOT a shared course or tutorial
+- NOT a polished framework

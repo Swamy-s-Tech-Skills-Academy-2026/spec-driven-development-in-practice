@@ -1,0 +1,27 @@
+---
+description: Quality assurance standards for notes and documentation
+globs: *.md
+---
+# Quality Assurance
+
+## Content Quality Checklist
+
+### Markdown Files
+
+- [ ] Follows naming convention: `NN_<slug>.md` (kebab-case, two-digit prefix, no `00_`).
+- [ ] No hardcoded external links that may break.
+- [ ] Mermaid diagrams use the standard colour convention from rule `01`.
+- [ ] All Mermaid blocks are valid and render cleanly.
+
+## Content Review Checklist (Zero-Copy)
+
+- [ ] **Originality Check**: Verify that text is not a direct copy from reference material.
+- [ ] **Synthesis**: Ensure content represents synthesized understanding, not rephrasing.
+- [ ] **Citations**: Check that specific definitions and claims are cited.
+- [ ] **Voice**: First-person learning journey; no instructor or "course" framing.
+
+## Documentation Quality
+
+- `README.md` must match actual repo content.
+- Notes must accurately reflect SDD concepts and Swamy's current understanding.
+- Comments in any incidental code explain the *why*, not just the *how*.

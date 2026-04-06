@@ -1,0 +1,28 @@
+---
+description: Naming conventions for topic files and folders
+globs: *
+---
+# File Naming Conventions
+
+> **Topic unit architecture (this repo)**: See [09_week-companion-architecture.mdc](./09_week-companion-architecture.mdc) for on-demand creation rules and topic governance.
+
+## Topic file numbering
+
+- **Start at `01_`**: File numbering starts at `01_` (never `00_`).
+- **Sequential**: Use `01_`, `02_`, `03_`, … as topics are added.
+- **Kebab-case slug**: `01_spec-first-design.md`, `02_eval-loop-patterns.md`.
+
+## File naming pattern (within topic folders)
+
+| Folder | Example file names |
+|--------|--------------------|
+| `notes/` | `01_sdd-foundations.md`, `02_deterministic-ai.md` |
+| `specs/` | `01_prompt-contract-template.md`, `02_behavior-spec-example.md` |
+| `evals/` | `01_eval-loop-design.md`, `02_eval-metrics.md` |
+| `patterns/` | `01_spec-first-pattern.md`, `02_prompt-versioning.md` |
+| `experiments/` | `01_first-spec-experiment.md` |
+
+## Images & figures
+
+- Descriptive kebab-case (e.g. `spec-flow-diagram.png`).
+- Stored alongside or in a subfolder of the relevant topic folder.

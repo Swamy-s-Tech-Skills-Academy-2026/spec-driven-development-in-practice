@@ -1,0 +1,53 @@
+---
+description: Key guidelines extracted from copilot-instructions.md for AI assistants
+globs: *
+---
+# Copilot Instructions Extract
+
+**Source**: `.github/copilot-instructions.md` — the **canonical** reference for all AI assistants in this repository. This file provides a concise summary; when in doubt, defer to the source.
+
+---
+
+## Repository Context
+
+**Spec-Driven Development in Practice** — Swamy PKV's personal learning workspace for SDD, deterministic AI, and eval-driven development. Not a web application. Not a production system. Markdown only.
+
+**Owner**: Swamy PKV
+
+---
+
+## Topic unit architecture (this repo)
+
+**Full contract**: [09_week-companion-architecture.mdc](./09_week-companion-architecture.mdc)
+**Naming patterns**: [07_file-naming-conventions.mdc](./07_file-naming-conventions.mdc)
+
+Files in each topic folder use `NN_<slug>.md` naming (`01_`, `02_`, …). Folders are created on demand.
+
+---
+
+## Key policies (summary)
+
+| Policy | Details | Full reference |
+|--------|---------|----------------|
+| **Zero-copy** | Original synthesis only; no copy-paste from reference sources | [01_educational-content-rules.mdc](./01_educational-content-rules.mdc) |
+| **Voice** | Swamy's first-person learning journey; avoid instructor/course framing | `.github/copilot-instructions.md` |
+| **Naming** | `NN_<slug>.md`, kebab-case, no `00_` | [07_file-naming-conventions.mdc](./07_file-naming-conventions.mdc) |
+
+---
+
+## Environment and commands
+
+No Python environment required. CI is Markdown-only. Markdownlint rules: **`.markdownlint-cli2.yaml`** at the repo root.
+
+```bash
+npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" "notes/**/*.md" "specs/**/*.md" "evals/**/*.md" "patterns/**/*.md" "experiments/**/*.md"
+```
+
+---
+
+## Quality quick-check
+
+- [ ] Topic files follow `NN_<slug>.md` naming within their folder
+- [ ] Content is original synthesis with citations where needed
+- [ ] No unauthorized reference to internal-only material in public docs
+- [ ] First-person voice in notes; no instructor/course framing

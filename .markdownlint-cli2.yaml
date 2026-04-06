@@ -1,0 +1,45 @@
+# Markdownlint-CLI2 — spec-driven-development-in-practice
+# Aligns with .cursor/rules/04_markdown-standards.mdc (~120 char lines) and CI workflows.
+# Reference: https://github.com/DavidAnson/markdownlint-cli2
+# Rule reference: https://github.com/DavidAnson/markdownlint/blob/main/schema/.markdownlint.yaml
+
+fix: false
+
+# Strip YAML front matter in agent skills (--- ... ---) before linting.
+frontMatter: "^---\\s*\\n[\\s\\S]*?\\n---\\s*(\\n|$)"
+
+config:
+  default: true
+
+  # Line length (~120) — relax inside tables and code (see rule schema).
+  MD013:
+    line_length: 120
+    heading_line_length: 120
+    code_blocks: false
+    tables: false
+    headings: false
+
+  # README shields use inline HTML.
+  MD033: false
+
+  # Table pipe alignment is optional for small docs tables.
+  MD060: false
+
+  # Avoid noisy failures for tight list/fence spacing common in notes.
+  MD031: false
+  MD032: false
+
+  # Allow duplicate section titles in different parent sections (e.g. repeated ### Scope).
+  MD024:
+    siblings_only: true
+
+  # ATX headings (# / ##) — matches docs style in CLAUDE.md / copilot-instructions.
+  MD003:
+    style: atx
+
+  # Consistent fenced code blocks.
+  MD046:
+    style: fenced
+
+  MD048:
+    style: backtick

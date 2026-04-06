@@ -1,0 +1,27 @@
+---
+description: Rules for handling any reference or archival material
+globs: *
+---
+# Reference Material Rules
+
+If any `reference-material/` or internal staging folder exists in this repository:
+
+- **Read-Only**: Never modify, overwrite, or delete files in it.
+- **Internal only**: Do not mention or reference it in public-facing documentation.
+- **No copy-paste**: Always synthesize content from reference material into original notes in the topic folders.
+
+## Zero-Copy Policy
+
+### Good Synthesis (Accepted)
+
+- Demonstrates understanding in your own words
+- Uses different vocabulary
+- Shows original thinking and interpretation
+
+### Bad Synthesis (Rejected)
+
+- Word-for-word copying
+- Minor rephrasing without understanding
+- Close paraphrasing of source text
+
+**Reference**: See `01_educational-content-rules.mdc` for the full zero-copy policy.

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Discussions
+    url: https://github.com/Swamy-s-Tech-Skills-Academy-2026/spec-driven-development-in-practice/discussions
+    about: Optional conversation space for this repository (personal learning scope)
+  - name: README
+    url: https://github.com/Swamy-s-Tech-Skills-Academy-2026/spec-driven-development-in-practice#readme
+    about: Repository purpose, scope, and structure

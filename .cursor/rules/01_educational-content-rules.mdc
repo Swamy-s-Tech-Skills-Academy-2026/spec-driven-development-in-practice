@@ -1,0 +1,52 @@
+---
+description: Rules for creating educational content and notes
+globs: *.md
+---
+# Educational Content Rules
+
+**Context**: Personal learning notes and synthesis
+**Priority**: HIGH
+
+---
+
+## Core Principles
+
+### Academic Integrity (Zero-Copy)
+
+- **Original Synthesis**: Do not copy-paste directly from papers, articles, or reference material. Read, understand, and write in your own words.
+- **Citation**: If referencing a specific definition or concept, cite the source.
+
+### Clarity & Structure
+
+- **Concept First**: Explain the concept in Markdown before adding any diagram or example.
+- **Visuals**: Use Mermaid diagrams for flows, architectures, and decision trees. Use Markdown tables for comparisons.
+
+**Mermaid colour convention** (consistent across all files):
+
+| Node role | Fill |
+|-----------|------|
+| Highlight / active step | `fill:#ffd966` (gold) |
+| Info / secondary node | `fill:#dae8fc` (blue) |
+| Success / positive path | `fill:#d5e8d4` (green) |
+| Neutral / alternative | `fill:#fff2cc` (yellow) |
+| Warning / error path | `fill:#f8cecc` (red) |
+
+Always include `stroke:#333,color:#000` with every `fill`.
+
+## Voice and Tone
+
+- **Personal learning journey**: Write notes as Swamy's first-person learning journey (avoid "course" or instructor tone).
+- **Reflection-oriented**: Prefer "I'm learning…", "I plan to…", "I want to understand…"
+- **Avoid course framing**: Don't title notes as "Course …" or write like a lecturer.
+
+## Topic Unit Architecture (this repo)
+
+Files within each topic folder use two-digit numbered kebab-case names (`01_`, `02_`, …). Full governance: [09_week-companion-architecture.mdc](./09_week-companion-architecture.mdc).
+
+**Do not pre-scaffold** empty files for topics not yet started.
+
+## Markdown Standards
+
+- Use H2 (`##`) for main topics, H3 (`###`) for subtopics.
+- Use blockquotes (`>`) for definitions or key takeaways.
+- Use tables for summarizing patterns, comparisons, or options.
