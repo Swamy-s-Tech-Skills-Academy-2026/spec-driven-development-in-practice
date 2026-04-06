@@ -1,5 +1,4 @@
 ---
-title: Cursor Rules Index
 version: 1.4
 last_updated: 2026-04-05
 project: Spec-Driven Development in Practice
@@ -12,7 +11,8 @@ This folder contains the Cursor rule files (`.mdc`) used to guide edits in this 
 **Also see**:
 
 - [`.cursor/skills.md`](../skills.md) — short habits and CI expectations.
-- [`.cursor/skills/`](../skills/) — mirrored **`SKILL.md`** bundles (same as [`.github/skills/`](../../.github/skills/)); canonical copy under `.github/skills/`.
+- [`.cursor/skills/`](../skills/) — mirrored **`SKILL.md`** bundles (same as
+  [`.github/skills/`](../../.github/skills/)); canonical copy under `.github/skills/`.
 
 ---
 
@@ -52,7 +52,8 @@ Key guidelines extracted from `copilot-instructions.md` for AI assistants.
 
 ### `09_week-companion-architecture.mdc`
 
-Topic unit architecture — on-demand folders, `NN_<slug>.md` naming, governance (file name is historical; content is SDD topic units).
+Topic unit architecture — on-demand folders, `NN_<slug>.md` naming, governance (file name is historical;
+content is SDD topic units).
 
 ---
 

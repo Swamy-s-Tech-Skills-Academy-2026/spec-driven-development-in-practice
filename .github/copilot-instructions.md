@@ -12,13 +12,18 @@
 
 ## Strict scope (non-negotiable)
 
-This repository is **Swamy PKV's personal learning only**. It is **not** for anyone else as courseware, templates, tutorials, or a reference corpus. **Do not** frame content for a general audience (other students, "learners," recruiters). Public visibility is **not** an invitation to use this repo for third-party purposes. Keep `README.md` aligned with the **Scope** section.
+This repository is **Swamy PKV's personal learning only**. It is **not** for anyone else as courseware,
+templates, tutorials, or a reference corpus. **Do not** frame content for a general audience (other
+students, "learners," recruiters). Public visibility is **not** an invitation to use this repo for
+third-party purposes. Keep `README.md` aligned with the **Scope** section.
 
 ---
 
 ## Repository Purpose
 
-**Spec-Driven Development in Practice** is **Swamy's** learning workspace for building a principled understanding of Spec-Driven Development (SDD) and deterministic AI system design — **for his use**, not as a shared product for others.
+**Spec-Driven Development in Practice** is **Swamy's** learning workspace for building a principled
+understanding of Spec-Driven Development (SDD) and deterministic AI system design — **for his use**,
+not as a shared product for others.
 
 ### What This Repository Provides
 
@@ -50,9 +55,10 @@ All content lives in top-level topic folders created **on demand**:
 
 **No pre-scaffolding** — folders are created when work begins. Do not create empty placeholder folders.
 
-**Topic unit architecture**
+### Topic unit architecture
 
-Files within each folder use two-digit kebab-case numbered names: `01_spec-first-design.md`, `02_eval-loops.md`, etc. Authoritative governance: `.cursor/rules/09_week-companion-architecture.mdc`.
+Files within each folder use two-digit kebab-case numbered names: `01_spec-first-design.md`,
+`02_eval-loops.md`, etc. Authoritative governance: `.cursor/rules/09_week-companion-architecture.mdc`.
 
 ---
 
@@ -89,7 +95,8 @@ Files within each folder use two-digit kebab-case numbered names: `01_spec-first
 
 ## CI Checks
 
-Markdown lint (aligns with `ci-documentation.yml`). Rules: **`.markdownlint-cli2.yaml`** at the repository root (loaded automatically by `markdownlint-cli2`).
+Markdown lint (aligns with `ci-documentation.yml`). Rules: **`.markdownlint-cli2.yaml`** at the
+repository root (loaded automatically by `markdownlint-cli2`).
 
 ```powershell
 npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" "notes/**/*.md" "specs/**/*.md" "evals/**/*.md" "patterns/**/*.md" "experiments/**/*.md"

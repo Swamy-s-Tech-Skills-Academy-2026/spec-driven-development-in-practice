@@ -6,7 +6,7 @@ globs: *
 
 **Project**: Spec-Driven Development in Practice
 
-> **Single Source of Truth**: For the complete and detailed repository structure, please refer to [docs/01_repository-structure.md](../../docs/01_repository-structure.md) when it exists.
+> **Single Source of Truth**: [docs/01_repository-structure.md](../../docs/01_repository-structure.md).
 
 ## Quick Summary
 

@@ -25,3 +25,7 @@ They complement `CLAUDE.md`, `.cursor/rules/*.mdc`, and `.github/copilot-instruc
 ## Canonical reference
 
 See `.github/skills/README.md` for the parity verification script and the authoritative list of bundles.
+
+## Repository layout
+
+For topic folders, naming, and on-demand creation rules, see [`01_repository-structure.md`](./01_repository-structure.md).
