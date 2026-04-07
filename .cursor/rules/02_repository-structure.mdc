@@ -10,16 +10,15 @@ globs: *
 
 ## Quick Summary
 
-**Notes** live under **`src/notes/`**. Other topic folders and **`docs/`** are at the repository root,
-created on demand:
+All **topic** folders live under **`src/`**. **`docs/`** stays at the repository root. Created on demand:
 
 | Folder | Purpose |
 |--------|---------|
 | `src/notes/` | Theory, insights, evolving understanding |
-| `specs/` | Behavior specifications and prompt contracts |
-| `evals/` | Evaluation strategies and eval loop designs |
-| `patterns/` | SDD patterns and reusable practices |
-| `experiments/` | Small experiments and iterations |
+| `src/specs/` | Behavior specifications and prompt contracts |
+| `src/evals/` | Evaluation strategies and eval loop designs |
+| `src/patterns/` | SDD patterns and reusable practices |
+| `src/experiments/` | Small experiments and iterations |
 | `docs/` | Meta-documentation and guides |
 
 Files within each folder: `01_<slug>.md`, `02_<slug>.md`, … (kebab-case, no `00_` prefix).

@@ -15,7 +15,7 @@ globs: *
 Do **not** mention or reference **`source-material/`** (or `reference-material/`) in:
 
 - `README.md`
-- `src/notes/` and root topic folders: `specs/`, `evals/`, `patterns/`, `experiments/`
+- Topic trees under `src/`: `src/notes/`, `src/specs/`, `src/evals/`, `src/patterns/`, `src/experiments/`
 - `docs/**/*.md` (meta and guides that ship with the repo narrative)
 
 Synthesize into topic Markdown with zero-copy; readers should see ideas, not pointers to staging trees.

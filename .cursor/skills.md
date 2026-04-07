@@ -16,16 +16,16 @@ See `README.md` (**Scope**) and `.cursor/rules/00_swamy_personal_learning_only.m
 
 ## Topic folders (on demand)
 
-**Notes** live under **`src/notes/`**; other topic folders and **`docs/`** are at the repository root.
-Create files only when work on that topic begins:
+All **topic** folders live under **`src/`**; **`docs/`** is at the repository root. Create files only when
+work on that topic begins:
 
 | Folder | Role |
 |--------|------|
 | `src/notes/` | Theory, insights, evolving understanding |
-| `specs/` | Behavior specifications, prompt contracts |
-| `evals/` | Evaluation strategies, eval loop designs |
-| `patterns/` | SDD patterns and reusable practices |
-| `experiments/` | Small experiments and iteration notes |
+| `src/specs/` | Behavior specifications, prompt contracts |
+| `src/evals/` | Evaluation strategies, eval loop designs |
+| `src/patterns/` | SDD patterns and reusable practices |
+| `src/experiments/` | Small experiments and iteration notes |
 | `docs/` | Meta-documentation |
 
 Files use **`NN_<slug>.md`** (two-digit prefix, kebab-case). Never `00_`.
@@ -45,7 +45,7 @@ consistent terminology and links.
   instructions).
 - **Zero-copy**: original synthesis in public folders; cite definitions when needed.
 - **`source-material/`** (gitignored) and **`reference-material/`** (if present): read-only staging; do **not**
-  mention either path in `README.md`, `src/notes/`, root topic folders, or `docs/**/*.md`. Policy:
+  mention either path in `README.md`, any `src/**` topic Markdown, or `docs/**/*.md`. Policy:
   `.cursor/rules/06_source_material_rules.mdc`.
 
 ---

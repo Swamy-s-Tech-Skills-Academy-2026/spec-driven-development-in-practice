@@ -12,7 +12,7 @@ This repository is **Markdown-only**. There is no OpenAPI or web API surface to 
 | Concern | Source of truth | Common errors |
 |---------|-----------------|---------------|
 | Top-level layout | `README.md`, `CLAUDE.md`, `.github/copilot-instructions.md` | Listing internal-only paths in public docs |
-| Topic folders | `.cursor/rules/09_week-companion-architecture.mdc` | Wrong folder for content type (e.g. spec content under `src/notes/` when it belongs in `specs/`) |
+| Topic folders | `.cursor/rules/09_week-companion-architecture.mdc` | Wrong folder for content type (e.g. spec content under `src/notes/` when it belongs in `src/specs/`) |
 | File naming | `.cursor/rules/07_file-naming-conventions.mdc` | `00_` prefix; missing or non-kebab slug |
 | On-demand rule | Rule `09` | Stub files for topics not yet started |
 | Voice / framing | `.github/copilot-instructions.md` | Instructor tone; third-party audience framing |

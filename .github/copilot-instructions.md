@@ -1,6 +1,6 @@
 # GitHub Copilot Instructions for Spec-Driven Development in Practice
 
-**Version**: 1.4
+**Version**: 1.5
 **Last Updated**: April 8, 2026
 **Repository**: `spec-driven-development-in-practice`
 **Context**: AI Engineering — Personal learning exploration
@@ -57,14 +57,13 @@ not as a shared product for others.
 
 **Quick Reference:**
 
-**Notes** live under **`src/notes/`**. Other topic folders and **`docs/`** are at the repository root,
-created **on demand**:
+All **topic** folders live under **`src/`**. **`docs/`** is at the repository root, created **on demand**:
 
 - `src/notes/` — theory, insights, evolving understanding
-- `specs/` — behavior specifications and prompt contracts
-- `evals/` — evaluation strategies and eval loops
-- `patterns/` — SDD patterns and reusable practices
-- `experiments/` — small experiments and iterations
+- `src/specs/` — behavior specifications and prompt contracts
+- `src/evals/` — evaluation strategies and eval loops
+- `src/patterns/` — SDD patterns and reusable practices
+- `src/experiments/` — small experiments and iterations
 - `docs/` — meta-documentation and guides
 - `.github/skills/` — Bundled agent skills (`SKILL.md` per subfolder). **Mirrored** at `.cursor/skills/`.
 
@@ -89,8 +88,8 @@ Files within each folder use two-digit kebab-case numbered names: `01_spec-first
 
 ### Staging folders (not in public learning docs)
 
-- Do **not** mention **`source-material/`** or **`reference-material/`** in `README.md`, `src/notes/`, root
-  topic folders, or **`docs/**/*.md`**.
+- Do **not** mention **`source-material/`** or **`reference-material/`** in `README.md`, any **`src/**`**
+  topic Markdown, or **`docs/**/*.md`**.
 - Synthesize into topic Markdown; assistants may name these paths only in agent config (this file,
   `CLAUDE.md`, `.cursor/**`, `.github/skills/**`) to state policy — see
   `.cursor/rules/06_source_material_rules.mdc`.
@@ -126,7 +125,7 @@ Markdown lint (aligns with `ci-documentation.yml`). Agent-docs paths are linted 
 Skills mirror parity: `ci-skills-parity.yml` / `ci-agent-docs-guard.yml`.
 
 ```bash
-npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" "src/notes/**/*.md" "specs/**/*.md" "evals/**/*.md" "patterns/**/*.md" "experiments/**/*.md"
+npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" "src/notes/**/*.md" "src/specs/**/*.md" "src/evals/**/*.md" "src/patterns/**/*.md" "src/experiments/**/*.md"
 ```
 
 On Windows PowerShell, the same command works as-is.
@@ -135,7 +134,7 @@ On Windows PowerShell, the same command works as-is.
 
 When asking Copilot for help:
 
-- Specify which topic area (`specs/`, `evals/`, `patterns/`, `src/notes/`, `experiments/`).
+- Specify which topic area (`src/specs/`, `src/evals/`, `src/patterns/`, `src/notes/`, `src/experiments/`).
 - State the SDD concept clearly (e.g., "add a note on prompt versioning patterns").
 - Reference related files for consistency.
 

@@ -40,10 +40,10 @@ jobs:
             "README.md" \
             "docs/**/*.md" \
             "src/notes/**/*.md" \
-            "specs/**/*.md" \
-            "evals/**/*.md" \
-            "patterns/**/*.md" \
-            "experiments/**/*.md"
+            "src/specs/**/*.md" \
+            "src/evals/**/*.md" \
+            "src/patterns/**/*.md" \
+            "src/experiments/**/*.md"
 
   link-checker:
     name: Link Checking (Lychee)

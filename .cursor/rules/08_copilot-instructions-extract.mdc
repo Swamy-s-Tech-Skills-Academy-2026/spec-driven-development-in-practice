@@ -33,7 +33,7 @@ Files in each topic folder use `NN_<slug>.md` naming (`01_`, `02_`, …). Folder
 | Policy | Details | Full reference |
 |--------|---------|----------------|
 | **Zero-copy** | Original synthesis only; no copy-paste from reference sources | [01_educational-content-rules.mdc](./01_educational-content-rules.mdc) |
-| **Staging** | Do not mention `source-material/` or `reference-material/` in `README.md`, `src/notes/`, root topic folders, or `docs/**/*.md` | [06_source_material_rules.mdc](./06_source_material_rules.mdc) |
+| **Staging** | Do not mention `source-material/` or `reference-material/` in `README.md`, `src/**` topics, or `docs/**/*.md` | [06_source_material_rules.mdc](./06_source_material_rules.mdc) |
 | **Voice** | Swamy's first-person learning journey; avoid instructor/course framing | `.github/copilot-instructions.md` |
 | **Naming** | `NN_<slug>.md`, kebab-case, no `00_` | [07_file-naming-conventions.mdc](./07_file-naming-conventions.mdc) |
 
@@ -44,7 +44,7 @@ Files in each topic folder use `NN_<slug>.md` naming (`01_`, `02_`, …). Folder
 No Python environment required. CI is Markdown-only. Markdownlint rules: **`.markdownlint-cli2.yaml`** at the repo root.
 
 ```bash
-npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" "src/notes/**/*.md" "specs/**/*.md" "evals/**/*.md" "patterns/**/*.md" "experiments/**/*.md"
+npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" "src/notes/**/*.md" "src/specs/**/*.md" "src/evals/**/*.md" "src/patterns/**/*.md" "src/experiments/**/*.md"
 ```
 
 ---
@@ -53,5 +53,5 @@ npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" "src/notes/**/*.md" "spec
 
 - [ ] Topic files follow `NN_<slug>.md` naming within their folder
 - [ ] Content is original synthesis with citations where needed
-- [ ] No `source-material/` or `reference-material/` in `README.md`, `src/notes/`, root topic folders, or `docs/**/*.md`
+- [ ] No `source-material/` or `reference-material/` in `README.md`, `src/**` topics, or `docs/**/*.md`
 - [ ] First-person voice in notes; no instructor/course framing
