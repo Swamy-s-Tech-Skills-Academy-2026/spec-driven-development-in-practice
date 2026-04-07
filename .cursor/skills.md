@@ -1,7 +1,8 @@
 # Repository skills (Spec-Driven Development in Practice)
 
-This file is **local to `spec-driven-development-in-practice`**. It complements `.cursor/rules/*.mdc`
-and `.github/copilot-instructions.md` with concise guidance for assistants editing this repo.
+This file is **local to `spec-driven-development-in-practice`**. It complements **`CLAUDE.md`** (Claude
+Code entry), `.cursor/rules/*.mdc`, and `.github/copilot-instructions.md` (Copilot / general assistants)
+with concise guidance for assistants editing this repo.
 
 **Strict scope:** This repo is **Swamy PKV’s personal learning only** — not courseware for others.
 See `README.md` (**Scope**) and `.cursor/rules/00_swamy_personal_learning_only.mdc`.
@@ -28,7 +29,8 @@ Content lives in top-level topic directories. Create files only when work on tha
 
 Files use **`NN_<slug>.md`** (two-digit prefix, kebab-case). Never `00_`.
 
-**Authority:** `.cursor/rules/09_week-companion-architecture.mdc`. **Naming:**
+**SSOT write-up:** `docs/01_repository-structure.md`. **Authority:**
+`.cursor/rules/09_week-companion-architecture.mdc`. **Naming:**
 `.cursor/rules/07_file-naming-conventions.mdc`.
 
 When I edit one file in a topic line of thought, I check sibling notes in the same folder for

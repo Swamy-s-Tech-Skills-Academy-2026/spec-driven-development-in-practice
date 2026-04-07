@@ -1,12 +1,26 @@
 # GitHub Copilot Instructions for Spec-Driven Development in Practice
 
-**Version**: 1.0
-**Last Updated**: April 5, 2026
+**Version**: 1.1
+**Last Updated**: April 7, 2026
 **Repository**: `spec-driven-development-in-practice`
 **Context**: AI Engineering — Personal learning exploration
 
 **Environment**: Windows, PowerShell, Markdown
 **Note**: This is a Markdown-only repository. No Python environment, no Jupyter, no build tools.
+
+---
+
+## Assistant entry points (keep aligned)
+
+| File | Role |
+|------|------|
+| `CLAUDE.md` | Claude Code entry — structure, skills, CI commands |
+| `.cursor/skills.md` | Short Cursor habits; mirrors this file’s scope and CI expectations |
+| `docs/agent-skills.md` | How `SKILL.md` bundles relate to rules and this document |
+| `docs/01_repository-structure.md` | Structural single source of truth (topic folders, naming) |
+
+**Canonical copy for Copilot:** this file (`.github/copilot-instructions.md`). When any of the above
+changes, update the others in the same pass so assistants stay consistent.
 
 ---
 
@@ -58,7 +72,9 @@ All content lives in top-level topic folders created **on demand**:
 ### Topic unit architecture
 
 Files within each folder use two-digit kebab-case numbered names: `01_spec-first-design.md`,
-`02_eval-loops.md`, etc. Authoritative governance: `.cursor/rules/09_week-companion-architecture.mdc`.
+`02_eval-loops.md`, etc. (**Never** `00_`.) Authoritative governance:
+`.cursor/rules/09_week-companion-architecture.mdc`. **Naming patterns:**
+`.cursor/rules/07_file-naming-conventions.mdc`. **Layout write-up:** `docs/01_repository-structure.md`.
 
 ---
 
@@ -95,12 +111,16 @@ Files within each folder use two-digit kebab-case numbered names: `01_spec-first
 
 ## CI Checks
 
-Markdown lint (aligns with `ci-documentation.yml`). Rules: **`.markdownlint-cli2.yaml`** at the
-repository root (loaded automatically by `markdownlint-cli2`).
+Markdown lint (aligns with `ci-documentation.yml`). Agent-docs paths are linted in
+`ci-agent-docs-guard.yml` (`CLAUDE.md`, `.cursor/skills.md`, skill trees). Rules:
+**`.markdownlint-cli2.yaml`** at the repository root (loaded automatically by `markdownlint-cli2`).
+Skills mirror parity: `ci-skills-parity.yml` / `ci-agent-docs-guard.yml`.
 
-```powershell
+```bash
 npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" "notes/**/*.md" "specs/**/*.md" "evals/**/*.md" "patterns/**/*.md" "experiments/**/*.md"
 ```
+
+On Windows PowerShell, the same command works as-is.
 
 ## Prompt Engineering
 

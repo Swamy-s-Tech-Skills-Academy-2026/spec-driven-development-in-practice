@@ -60,11 +60,11 @@ This repository is strictly for:
 ## Repository structure (evolving)
 
 ```text
+/notes           # Theory, insights, and evolving understanding
 /specs           # Behavior specifications and prompt contracts
 /evals           # Evaluation strategies and eval loop designs
 /patterns        # SDD patterns and practices
 /experiments     # Small experiments and iterations
-/notes           # Theory, insights, and evolving understanding
 /docs            # Meta-documentation and guides
 ```
 

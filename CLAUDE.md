@@ -18,19 +18,21 @@ explicitly asks. Preserve the **Scope** block in `README.md`.
 
 ## Repository structure
 
-Content is organized into topic folders created **on demand** — no pre-scaffolding:
+Content is organized into topic folders created **on demand** — no pre-scaffolding. **Human-readable
+layout** (same table as `.cursor/rules/09_week-companion-architecture.mdc`):
 
 | Folder | Purpose |
 |--------|---------|
+| `notes/` | Theory, insights, and evolving understanding |
 | `specs/` | Behavior specifications and prompt contracts |
 | `evals/` | Evaluation strategies and eval loop designs |
 | `patterns/` | SDD patterns and reusable practices |
 | `experiments/` | Small experiments and iteration notes |
-| `notes/` | Theory, insights, and evolving understanding |
 | `docs/` | Meta documentation and repository guides |
 
-Topic files within each folder use kebab-case numbered names (`01_`, `02_`, …).
+Topic files use **`NN_<slug>.md`** (two-digit prefix, kebab-case). Never `00_`.
 
+**SSOT write-up**: `docs/01_repository-structure.md`
 **Governance**: `.cursor/rules/09_week-companion-architecture.mdc`
 **Naming**: `.cursor/rules/07_file-naming-conventions.mdc`
 
@@ -75,6 +77,7 @@ docker run --rm -v "${PWD}:/workspace" -w /workspace lycheeverse/lychee:latest \
 | `.cursor/skills.md` | Short habits and CI expectations |
 | `.github/skills/` | Bundled agent skills (canonical); mirrored at `.cursor/skills/` |
 | `docs/agent-skills.md` | SKILL.md pattern, progressive disclosure, skills mirror |
+| `docs/01_repository-structure.md` | Topic folders, naming, on-demand creation (structural SSOT) |
 | `.cursor/rules/09_week-companion-architecture.mdc` | Topic unit architecture, on-demand creation, naming contract |
 | `.github/prompts/task-prompt.md` | Structured audit template |
 | `.github/prompts/smart-prompt-framework-guide.md` | S.M.A.R.T. prompt framework |

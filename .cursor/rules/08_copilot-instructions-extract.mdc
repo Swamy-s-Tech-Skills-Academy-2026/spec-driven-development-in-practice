@@ -6,6 +6,9 @@ globs: *
 
 **Source**: `.github/copilot-instructions.md` — the **canonical** reference for all AI assistants in this repository. This file provides a concise summary; when in doubt, defer to the source.
 
+**Keep aligned with**: `CLAUDE.md`, `.cursor/skills.md`, `docs/agent-skills.md`, and
+`docs/01_repository-structure.md` (update together when structure or CI expectations change).
+
 ---
 
 ## Repository Context

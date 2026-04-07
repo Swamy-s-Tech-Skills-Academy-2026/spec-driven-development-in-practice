@@ -9,7 +9,8 @@ pattern so skill files lint correctly).
 ## Why skills exist
 
 Skills give assistants **progressive disclosure**: match a task to a small bundle instead of loading every rule file.
-They complement `CLAUDE.md`, `.cursor/rules/*.mdc`, and `.github/copilot-instructions.md`.
+They complement `CLAUDE.md`, `.cursor/skills.md`, `.cursor/rules/*.mdc`, and `.github/copilot-instructions.md`
+— keep scope, folder lists, and CI notes aligned across those entry points when you change one.
 
 ## Bundles (high level)
 
