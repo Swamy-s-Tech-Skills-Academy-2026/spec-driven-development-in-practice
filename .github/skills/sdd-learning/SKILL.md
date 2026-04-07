@@ -7,8 +7,8 @@ description: Work on Spec-Driven Development in Practice — notes, specs, evals
 
 ## When to use
 
-- Editing or reviewing `src/notes/`, `specs/`, `evals/`, `patterns/`, `experiments/`, or `docs/` in **this**
-  repository.
+- Editing or reviewing `src/notes/`, `src/specs/`, `src/evals/`, `src/patterns/`, `src/experiments/`, or
+  `docs/` in **this** repository.
 
 ## Repository facts
 
@@ -20,18 +20,18 @@ description: Work on Spec-Driven Development in Practice — notes, specs, evals
 - **Voice**: first-person learning journey; avoid instructor or course framing (see
   `.github/copilot-instructions.md`).
 - **Zero-copy**: original synthesis; cite sources when using specific definitions.
-- **Staging**: do not mention `source-material/` or `reference-material/` in `README.md`, `src/notes/`, root
-  topic folders, or `docs/**/*.md` (rule `06`).
+- **Staging**: do not mention `source-material/` or `reference-material/` in `README.md`, any `src/**`
+  topic Markdown, or `docs/**/*.md` (rule `06`).
 
 ## Topic areas (SDD)
 
 | Area | Typical folders | Slug family |
 |------|-----------------|-------------|
-| Spec-first design | `specs/`, `src/notes/` | `spec-first-*` |
-| Eval-driven development | `evals/`, `patterns/` | `eval-*` |
-| Prompt engineering | `specs/`, `patterns/` | `prompt-*` |
-| Deterministic AI | `src/notes/`, `experiments/` | `deterministic-*` |
-| LLM pipelines | `patterns/`, `experiments/` | `llm-pipeline-*` |
+| Spec-first design | `src/specs/`, `src/notes/` | `spec-first-*` |
+| Eval-driven development | `src/evals/`, `src/patterns/` | `eval-*` |
+| Prompt engineering | `src/specs/`, `src/patterns/` | `prompt-*` |
+| Deterministic AI | `src/notes/`, `src/experiments/` | `deterministic-*` |
+| LLM pipelines | `src/patterns/`, `src/experiments/` | `llm-pipeline-*` |
 
 ## Quality hooks
 

@@ -21,7 +21,7 @@ T — Task-oriented constraints (Markdown-only repo, zero-copy, naming)
 When creating prompts for this repo, consider:
 
 - **Pattern**: instruction-following, role-based, chain-of-thought, or evaluation-style task?
-- **Location**: which topic folder (`specs/`, `evals/`, `patterns/`, `src/notes/`, `experiments/`, `docs/`)?
+- **Location**: which topic folder (`src/specs/`, `src/evals/`, `src/patterns/`, `src/notes/`, `src/experiments/`, `docs/`)?
 - **Topic units**: files are **`NN_<slug>.md`**, folders created **on demand** — see `.cursor/rules/09_week-companion-architecture.mdc`.
 - **Reusability**: can the prompt template apply to multiple future topic files without assuming fixed week numbers or code paths?
 
@@ -75,7 +75,7 @@ You are a [specific role] helping refine [SDD concept / spec / eval design] in a
 ```markdown
 ROLE: You are helping me refine a behavior spec and its eval hooks in my personal SDD notes repo.
 
-MISSION: In specs/02_ingestion-guardrails.md (create on demand), write a spec for an LLM step
+MISSION: In src/specs/02_ingestion-guardrails.md (create on demand), write a spec for an LLM step
 that classifies user tickets into priority buckets, including forbidden behaviors and a small
 golden set of expected labels.
 
@@ -100,9 +100,9 @@ CONSTRAINTS:
 
 ### Strong (specific)
 
-- “Add `evals/01_regression-suite-outline.md` describing three metrics and when to rerun the suite.”
-- “Tighten the acceptance criteria in `specs/01_prompt-contract-template.md` so each bullet is testable.”
-- “Fix broken relative links between `src/notes/01_sdd-foundations.md` and `patterns/01_spec-first-pattern.md`.”
+- “Add `src/evals/01_regression-suite-outline.md` describing three metrics and when to rerun the suite.”
+- “Tighten the acceptance criteria in `src/specs/01_prompt-contract-template.md` so each bullet is testable.”
+- “Fix broken relative links between `src/notes/01_sdd-foundations.md` and `src/patterns/01_spec-first-pattern.md`.”
 
 ### Weak (vague)
 

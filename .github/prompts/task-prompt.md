@@ -7,10 +7,10 @@ You are working with **spec-driven-development-in-practice**, Swamy PKV’s **pe
 **Repository structure (topic folders, on demand):**
 
 - `src/notes/` — theory, insights, evolving understanding
-- `specs/` — behavior specifications, prompt contracts
-- `evals/` — evaluation strategies, eval loop designs
-- `patterns/` — SDD patterns and reusable practices
-- `experiments/` — small experiments and iteration notes
+- `src/specs/` — behavior specifications, prompt contracts
+- `src/evals/` — evaluation strategies, eval loop designs
+- `src/patterns/` — SDD patterns and reusable practices
+- `src/experiments/` — small experiments and iteration notes
 - `docs/` — meta-documentation and guides
 - `.github/` — workflows, prompts, skills
 - `.cursor/` — Cursor rules and mirrored skills
