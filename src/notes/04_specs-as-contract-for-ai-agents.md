@@ -114,9 +114,9 @@ risk call, not an accident.
 ```mermaid
 flowchart TD
   P1["1 Constitution<br/>/constitution<br/>Principles, stack, test norms"]
-  P2["2 Specify<br/>/specify → spec.md<br/>What (stories, functional reqs)"]
-  P3["3 Plan<br/>/plan → plan.md<br/>Architecture, models, interfaces"]
-  P4["4 Tasks<br/>/tasks → tasks.md<br/>Isolated, testable units"]
+  P2["2 Specify<br/>/specify to spec.md<br/>What (stories, functional reqs)"]
+  P3["3 Plan<br/>/plan to plan.md<br/>Architecture, models, interfaces"]
+  P4["4 Tasks<br/>/tasks to tasks.md<br/>Isolated, testable units"]
   P5["5 Implement<br/>/implement<br/>Agent or human, within constraints"]
   P6["6 Verify<br/>Tests + review vs spec.md"]
   P1 --> P2 --> P3 --> P4 --> P5 --> P6
