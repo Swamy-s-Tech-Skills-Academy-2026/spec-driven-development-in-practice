@@ -11,7 +11,7 @@ description: Topic unit architecture for spec-driven-development-in-practice —
 
 | Folder | Role |
 |--------|------|
-| `notes/` | Theory, foundations, evolving understanding |
+| `src/notes/` | Theory, foundations, evolving understanding |
 | `specs/` | Behavior specifications, prompt contracts |
 | `evals/` | Evaluation strategies, eval loop designs |
 | `patterns/` | SDD patterns and reusable practices |

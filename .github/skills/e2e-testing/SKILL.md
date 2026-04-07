@@ -20,7 +20,7 @@ There is no deployed application or Python package in this repository. “End-to
 1. **Markdown lint (topics)** — same as `ci-documentation.yml`:
 
    ```powershell
-   npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" "notes/**/*.md" "specs/**/*.md" "evals/**/*.md" "patterns/**/*.md" "experiments/**/*.md"
+   npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" "src/notes/**/*.md" "specs/**/*.md" "evals/**/*.md" "patterns/**/*.md" "experiments/**/*.md"
    ```
 
 2. **Markdown lint (agent docs)** — if skills, rules, or `CLAUDE.md` changed:

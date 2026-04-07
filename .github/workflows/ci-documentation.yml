@@ -39,7 +39,7 @@ jobs:
           npx --yes markdownlint-cli2 \
             "README.md" \
             "docs/**/*.md" \
-            "notes/**/*.md" \
+            "src/notes/**/*.md" \
             "specs/**/*.md" \
             "evals/**/*.md" \
             "patterns/**/*.md" \

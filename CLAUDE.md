@@ -18,12 +18,13 @@ explicitly asks. Preserve the **Scope** block in `README.md`.
 
 ## Repository structure
 
-Content is organized into topic folders created **on demand** — no pre-scaffolding. **Human-readable
-layout** (same table as `.cursor/rules/09_week-companion-architecture.mdc`):
+**Notes** live under **`src/notes/`**. Other topic folders and **`docs/`** sit at the repository root,
+created **on demand** — no pre-scaffolding. **Human-readable layout** (same table as
+`.cursor/rules/09_week-companion-architecture.mdc`):
 
 | Folder | Purpose |
 |--------|---------|
-| `notes/` | Theory, insights, and evolving understanding |
+| `src/notes/` | Theory, insights, and evolving understanding |
 | `specs/` | Behavior specifications and prompt contracts |
 | `evals/` | Evaluation strategies and eval loop designs |
 | `patterns/` | SDD patterns and reusable practices |
@@ -45,8 +46,9 @@ complements `CLAUDE.md`, rules, and MCP: **`docs/agent-skills.md`**.
 ## Key rules
 
 - **Zero-copy**: All public content must be original synthesis. No copy-paste from reference materials or external sources.
-- **Staging hygiene**: Do **not** mention `source-material/` (or `reference-material/`) in `README.md`, topic
-  folders, or `docs/**/*.md`. Synthesize into topic notes; full rule: `.cursor/rules/06_source_material_rules.mdc`.
+- **Staging hygiene**: Do **not** mention `source-material/` (or `reference-material/`) in `README.md`,
+  `src/notes/`, root topic folders, or `docs/**/*.md`. Synthesize into topic notes; full rule:
+  `.cursor/rules/06_source_material_rules.mdc`.
 - **Voice**: First-person learning journey (Swamy's notes). Avoid instructor or "course" framing in reading notes.
 - **Docs style**: Use `##` for main topics, `###` for subtopics. Comments in any incidental code explain *why* not *how*.
 
@@ -59,7 +61,7 @@ No Python environment required — this is a Markdown-only learning repository.
 Aligned with `.github/workflows/ci-documentation.yml`. Full commands: `.github/skills/ci-checks/SKILL.md`.
 
 ```bash
-npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" "notes/**/*.md" "specs/**/*.md" "evals/**/*.md" "patterns/**/*.md" "experiments/**/*.md"
+npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" "src/notes/**/*.md" "specs/**/*.md" "evals/**/*.md" "patterns/**/*.md" "experiments/**/*.md"
 ```
 
 Optional link check:

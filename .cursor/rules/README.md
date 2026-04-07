@@ -41,7 +41,7 @@ Project focus and documentation accuracy rules.
 ### `06_source_material_rules.mdc`
 
 `source-material/` (gitignored) and `reference-material/` — staging hygiene; do not name them in public
-learning Markdown (`README.md`, topic folders, `docs/**/*.md`).
+learning Markdown (`README.md`, `src/notes/`, root topic folders, `docs/**/*.md`).
 
 ### `07_file-naming-conventions.mdc`
 

@@ -10,11 +10,12 @@ globs: *
 
 ## Quick Summary
 
-All content lives in **topic folders** created on demand:
+**Notes** live under **`src/notes/`**. Other topic folders and **`docs/`** are at the repository root,
+created on demand:
 
 | Folder | Purpose |
 |--------|---------|
-| `notes/` | Theory, insights, evolving understanding |
+| `src/notes/` | Theory, insights, evolving understanding |
 | `specs/` | Behavior specifications and prompt contracts |
 | `evals/` | Evaluation strategies and eval loop designs |
 | `patterns/` | SDD patterns and reusable practices |

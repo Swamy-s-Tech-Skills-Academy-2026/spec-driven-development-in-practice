@@ -16,11 +16,12 @@ See `README.md` (**Scope**) and `.cursor/rules/00_swamy_personal_learning_only.m
 
 ## Topic folders (on demand)
 
-Content lives in top-level topic directories. Create files only when work on that topic begins:
+**Notes** live under **`src/notes/`**; other topic folders and **`docs/`** are at the repository root.
+Create files only when work on that topic begins:
 
 | Folder | Role |
 |--------|------|
-| `notes/` | Theory, insights, evolving understanding |
+| `src/notes/` | Theory, insights, evolving understanding |
 | `specs/` | Behavior specifications, prompt contracts |
 | `evals/` | Evaluation strategies, eval loop designs |
 | `patterns/` | SDD patterns and reusable practices |
@@ -44,7 +45,7 @@ consistent terminology and links.
   instructions).
 - **Zero-copy**: original synthesis in public folders; cite definitions when needed.
 - **`source-material/`** (gitignored) and **`reference-material/`** (if present): read-only staging; do **not**
-  mention either path in `README.md`, topic folders, or `docs/**/*.md`. Policy:
+  mention either path in `README.md`, `src/notes/`, root topic folders, or `docs/**/*.md`. Policy:
   `.cursor/rules/06_source_material_rules.mdc`.
 
 ---
