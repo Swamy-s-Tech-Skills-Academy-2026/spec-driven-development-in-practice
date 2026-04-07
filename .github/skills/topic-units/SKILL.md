@@ -11,11 +11,11 @@ description: Topic unit architecture for spec-driven-development-in-practice —
 
 | Folder | Role |
 |--------|------|
-| `notes/` | Theory, foundations, evolving understanding |
-| `specs/` | Behavior specifications, prompt contracts |
-| `evals/` | Evaluation strategies, eval loop designs |
-| `patterns/` | SDD patterns and reusable practices |
-| `experiments/` | Small experiments and iteration notes |
+| `src/notes/` | Theory, foundations, evolving understanding |
+| `src/specs/` | Behavior specifications, prompt contracts |
+| `src/evals/` | Evaluation strategies, eval loop designs |
+| `src/patterns/` | SDD patterns and reusable practices |
+| `src/experiments/` | Small experiments and iteration notes |
 | `docs/` | Meta-documentation and repository guides |
 
 ## Naming contract
@@ -32,5 +32,6 @@ When adding or changing a topic file:
 3. No duplicate home for the same concept across folders.
 4. Relative internal links resolve.
 5. Zero-copy and voice rules hold (`.cursor/rules/01_educational-content-rules.mdc`).
+6. No mention of `source-material/` or `reference-material/` in `src/**` topic Markdown (rule `06`).
 
 **Authority**: `.cursor/rules/09_week-companion-architecture.mdc`.

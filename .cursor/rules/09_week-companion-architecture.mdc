@@ -15,7 +15,8 @@ This rule governs how learning content is organized. For naming patterns, see [0
 
 1. **On-demand creation**: Create folders and files only when starting work on that topic — never pre-scaffold.
 2. **Consistent naming**: All files use `NN_<slug>.md` (two-digit prefix, kebab-case slug).
-3. **Separation of concerns**: Learning notes, specs, evals, patterns, and experiments stay in their respective folders.
+3. **Separation of concerns**: All topic folders live under **`src/`**; meta guides live in root **`docs/`**
+   (on demand).
 
 ---
 
@@ -23,12 +24,12 @@ This rule governs how learning content is organized. For naming patterns, see [0
 
 | Folder | Purpose | Example file |
 |--------|---------|--------------|
-| `notes/` | Theory, foundations, evolving understanding | `01_sdd-foundations.md` |
-| `specs/` | Behavior specifications, prompt contracts | `01_prompt-contract-template.md` |
-| `evals/` | Evaluation strategies, eval loop designs | `01_eval-loop-design.md` |
-| `patterns/` | SDD patterns and reusable practices | `01_spec-first-pattern.md` |
-| `experiments/` | Small experiments and iteration notes | `01_first-spec-experiment.md` |
-| `docs/` | Meta-documentation and guides | `01_repository-structure.md` |
+| `src/notes/` | Theory, foundations, evolving understanding | `01_sdd-foundations.md` |
+| `src/specs/` | Behavior specifications, prompt contracts | `01_prompt-contract-template.md` |
+| `src/evals/` | Evaluation strategies, eval loop designs | `01_eval-loop-design.md` |
+| `src/patterns/` | SDD patterns and reusable practices | `01_spec-first-pattern.md` |
+| `src/experiments/` | Small experiments and iteration notes | `01_first-spec-experiment.md` |
+| `docs/` | Meta-documentation and guides (repository root) | `01_repository-structure.md`, `02_project-playbook.md` |
 
 ---
 

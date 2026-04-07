@@ -10,15 +10,15 @@ globs: *
 
 ## Quick Summary
 
-All content lives in **topic folders** created on demand:
+All **topic** folders live under **`src/`**. **`docs/`** stays at the repository root. Created on demand:
 
 | Folder | Purpose |
 |--------|---------|
-| `notes/` | Theory, insights, evolving understanding |
-| `specs/` | Behavior specifications and prompt contracts |
-| `evals/` | Evaluation strategies and eval loop designs |
-| `patterns/` | SDD patterns and reusable practices |
-| `experiments/` | Small experiments and iterations |
+| `src/notes/` | Theory, insights, evolving understanding |
+| `src/specs/` | Behavior specifications and prompt contracts |
+| `src/evals/` | Evaluation strategies and eval loop designs |
+| `src/patterns/` | SDD patterns and reusable practices |
+| `src/experiments/` | Small experiments and iterations |
 | `docs/` | Meta-documentation and guides |
 
 Files within each folder: `01_<slug>.md`, `02_<slug>.md`, … (kebab-case, no `00_` prefix).

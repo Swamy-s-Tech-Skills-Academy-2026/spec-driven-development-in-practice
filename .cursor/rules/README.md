@@ -40,7 +40,8 @@ Project focus and documentation accuracy rules.
 
 ### `06_source_material_rules.mdc`
 
-Rules for internal read-only staging (do not reference in public documentation).
+`source-material/` (gitignored) and `reference-material/` — staging hygiene; do not name them in public
+learning Markdown (`README.md`, `src/**` topic trees, `docs/**/*.md`).
 
 ### `07_file-naming-conventions.mdc`
 

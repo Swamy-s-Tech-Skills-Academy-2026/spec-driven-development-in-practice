@@ -1,12 +1,27 @@
 # GitHub Copilot Instructions for Spec-Driven Development in Practice
 
-**Version**: 1.0
-**Last Updated**: April 5, 2026
+**Version**: 1.5
+**Last Updated**: April 8, 2026
 **Repository**: `spec-driven-development-in-practice`
 **Context**: AI Engineering — Personal learning exploration
 
 **Environment**: Windows, PowerShell, Markdown
 **Note**: This is a Markdown-only repository. No Python environment, no Jupyter, no build tools.
+
+---
+
+## Assistant entry points (keep aligned)
+
+| File | Role |
+|------|------|
+| `CLAUDE.md` | Claude Code entry — structure, skills, CI commands |
+| `.cursor/skills.md` | Short Cursor habits; mirrors this file’s scope and CI expectations |
+| `docs/agent-skills.md` | How `SKILL.md` bundles relate to rules and this document |
+| `docs/01_repository-structure.md` | Structural single source of truth (topic folders, naming) |
+| `docs/02_project-playbook.md` | Repeatable spec-first steps for future projects |
+
+**Canonical copy for Copilot:** this file (`.github/copilot-instructions.md`). When any of the above
+changes, update the others in the same pass so assistants stay consistent.
 
 ---
 
@@ -43,13 +58,13 @@ not as a shared product for others.
 
 **Quick Reference:**
 
-All content lives in top-level topic folders created **on demand**:
+All **topic** folders live under **`src/`**. **`docs/`** is at the repository root, created **on demand**:
 
-- `notes/` — theory, insights, evolving understanding
-- `specs/` — behavior specifications and prompt contracts
-- `evals/` — evaluation strategies and eval loops
-- `patterns/` — SDD patterns and reusable practices
-- `experiments/` — small experiments and iterations
+- `src/notes/` — theory, insights, evolving understanding
+- `src/specs/` — behavior specifications and prompt contracts
+- `src/evals/` — evaluation strategies and eval loops
+- `src/patterns/` — SDD patterns and reusable practices
+- `src/experiments/` — small experiments and iterations
 - `docs/` — meta-documentation and guides
 - `.github/skills/` — Bundled agent skills (`SKILL.md` per subfolder). **Mirrored** at `.cursor/skills/`.
 
@@ -58,7 +73,9 @@ All content lives in top-level topic folders created **on demand**:
 ### Topic unit architecture
 
 Files within each folder use two-digit kebab-case numbered names: `01_spec-first-design.md`,
-`02_eval-loops.md`, etc. Authoritative governance: `.cursor/rules/09_week-companion-architecture.mdc`.
+`02_eval-loops.md`, etc. (**Never** `00_`.) Authoritative governance:
+`.cursor/rules/09_week-companion-architecture.mdc`. **Naming patterns:**
+`.cursor/rules/07_file-naming-conventions.mdc`. **Layout write-up:** `docs/01_repository-structure.md`.
 
 ---
 
@@ -69,6 +86,14 @@ Files within each folder use two-digit kebab-case numbered names: `01_spec-first
 - All notes must be original synthesis of ideas and learnings.
 - No direct copying from books, papers, or web sources without citation.
 - Content must demonstrate genuine understanding in Swamy's own words.
+
+### Staging folders (not in public learning docs)
+
+- Do **not** mention **`source-material/`** or **`reference-material/`** in `README.md`, any **`src/**`**
+  topic Markdown, or **`docs/**/*.md`**.
+- Synthesize into topic Markdown; assistants may name these paths only in agent config (this file,
+  `CLAUDE.md`, `.cursor/**`, `.github/skills/**`) to state policy — see
+  `.cursor/rules/06_source_material_rules.mdc`.
 
 ### Voice and Tone
 
@@ -95,18 +120,22 @@ Files within each folder use two-digit kebab-case numbered names: `01_spec-first
 
 ## CI Checks
 
-Markdown lint (aligns with `ci-documentation.yml`). Rules: **`.markdownlint-cli2.yaml`** at the
-repository root (loaded automatically by `markdownlint-cli2`).
+Markdown lint (aligns with `ci-documentation.yml`). Agent-docs paths are linted in
+`ci-agent-docs-guard.yml` (`CLAUDE.md`, `.cursor/skills.md`, skill trees). Rules:
+**`.markdownlint-cli2.yaml`** at the repository root (loaded automatically by `markdownlint-cli2`).
+Skills mirror parity: `ci-skills-parity.yml` / `ci-agent-docs-guard.yml`.
 
-```powershell
-npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" "notes/**/*.md" "specs/**/*.md" "evals/**/*.md" "patterns/**/*.md" "experiments/**/*.md"
+```bash
+npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" "src/notes/**/*.md" "src/specs/**/*.md" "src/evals/**/*.md" "src/patterns/**/*.md" "src/experiments/**/*.md"
 ```
+
+On Windows PowerShell, the same command works as-is.
 
 ## Prompt Engineering
 
 When asking Copilot for help:
 
-- Specify which topic area (`specs/`, `evals/`, `patterns/`, `notes/`, `experiments/`).
+- Specify which topic area (`src/specs/`, `src/evals/`, `src/patterns/`, `src/notes/`, `src/experiments/`).
 - State the SDD concept clearly (e.g., "add a note on prompt versioning patterns").
 - Reference related files for consistency.
 

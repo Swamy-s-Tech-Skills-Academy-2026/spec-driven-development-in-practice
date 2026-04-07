@@ -9,7 +9,8 @@ pattern so skill files lint correctly).
 ## Why skills exist
 
 Skills give assistants **progressive disclosure**: match a task to a small bundle instead of loading every rule file.
-They complement `CLAUDE.md`, `.cursor/rules/*.mdc`, and `.github/copilot-instructions.md`.
+They complement `CLAUDE.md`, `.cursor/skills.md`, `.cursor/rules/*.mdc`, and `.github/copilot-instructions.md`
+— keep scope, folder lists, and CI notes aligned across those entry points when you change one.
 
 ## Bundles (high level)
 
@@ -29,3 +30,6 @@ See `.github/skills/README.md` for the parity verification script and the author
 ## Repository layout
 
 For topic folders, naming, and on-demand creation rules, see [`01_repository-structure.md`](./01_repository-structure.md).
+
+For a **repeatable project habit** (spec → eval → implement elsewhere), see
+[`02_project-playbook.md`](./02_project-playbook.md).

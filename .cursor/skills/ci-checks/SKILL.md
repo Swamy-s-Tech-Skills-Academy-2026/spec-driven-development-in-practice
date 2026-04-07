@@ -29,7 +29,7 @@ Report each as PASS or FAIL with output.
 Same globs as `ci-documentation.yml`:
 
 ```powershell
-npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" "notes/**/*.md" "specs/**/*.md" "evals/**/*.md" "patterns/**/*.md" "experiments/**/*.md"
+npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" "src/notes/**/*.md" "src/specs/**/*.md" "src/evals/**/*.md" "src/patterns/**/*.md" "src/experiments/**/*.md"
 ```
 
 ### 2. markdownlint-cli2 (agent docs)

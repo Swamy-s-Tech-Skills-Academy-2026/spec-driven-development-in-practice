@@ -14,6 +14,8 @@ description: >
 3. Compare the tree to `README.md` and `CLAUDE.md`. If `docs/01_repository-structure.md` exists, use it
    as extra structure context.
 4. **Zero-copy:** public Markdown is original synthesis; flag close paraphrase of external sources without citation.
+4b. **Staging paths:** confirm `README.md`, all `src/**` topic Markdown, and `docs/**/*.md` do not mention
+    `source-material/` or `reference-material/` (rule `06`).
 5. **Topic units:** spot-check that files use `NN_<slug>.md` and sit in the right folder; no empty stubs.
 6. Run the **ci-checks** skill (markdownlint on topic globs; add agent-docs globs if `.cursor/` or
    `.github/skills/` changed).

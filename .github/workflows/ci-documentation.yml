@@ -39,11 +39,11 @@ jobs:
           npx --yes markdownlint-cli2 \
             "README.md" \
             "docs/**/*.md" \
-            "notes/**/*.md" \
-            "specs/**/*.md" \
-            "evals/**/*.md" \
-            "patterns/**/*.md" \
-            "experiments/**/*.md"
+            "src/notes/**/*.md" \
+            "src/specs/**/*.md" \
+            "src/evals/**/*.md" \
+            "src/patterns/**/*.md" \
+            "src/experiments/**/*.md"
 
   link-checker:
     name: Link Checking (Lychee)

@@ -12,7 +12,7 @@ A clear description of what I want to add or change.
 
 ## Feature type
 
-- [ ] New or expanded Markdown in topic folders (`notes/`, `specs/`, `evals/`, `patterns/`, `experiments/`)
+- [ ] New or expanded Markdown in topic folders (`src/notes/`, `src/specs/`, `src/evals/`, `src/patterns/`, `src/experiments/`)
 - [ ] Meta-documentation (`docs/`, `README.md`)
 - [ ] Automation or agent configuration (`.github/`, `.cursor/`)
 - [ ] Other (please describe)
@@ -29,7 +29,7 @@ Why this matters for my learning goals.
 
 ## Proposed location
 
-- `notes/` / `specs/` / `evals/` / `patterns/` / `experiments/` / `docs/` — specify path
+- `src/notes/` / `src/specs/` / `src/evals/` / `src/patterns/` / `src/experiments/` / `docs/` — specify path
 
 ## Related content
 

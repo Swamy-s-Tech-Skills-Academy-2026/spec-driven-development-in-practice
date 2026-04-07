@@ -1,7 +1,8 @@
 # Repository skills (Spec-Driven Development in Practice)
 
-This file is **local to `spec-driven-development-in-practice`**. It complements `.cursor/rules/*.mdc`
-and `.github/copilot-instructions.md` with concise guidance for assistants editing this repo.
+This file is **local to `spec-driven-development-in-practice`**. It complements **`CLAUDE.md`** (Claude
+Code entry), `.cursor/rules/*.mdc`, and `.github/copilot-instructions.md` (Copilot / general assistants)
+with concise guidance for assistants editing this repo.
 
 **Strict scope:** This repo is **Swamy PKV’s personal learning only** — not courseware for others.
 See `README.md` (**Scope**) and `.cursor/rules/00_swamy_personal_learning_only.mdc`.
@@ -15,19 +16,21 @@ See `README.md` (**Scope**) and `.cursor/rules/00_swamy_personal_learning_only.m
 
 ## Topic folders (on demand)
 
-Content lives in top-level topic directories. Create files only when work on that topic begins:
+All **topic** folders live under **`src/`**; **`docs/`** is at the repository root. Create files only when
+work on that topic begins:
 
 | Folder | Role |
 |--------|------|
-| `notes/` | Theory, insights, evolving understanding |
-| `specs/` | Behavior specifications, prompt contracts |
-| `evals/` | Evaluation strategies, eval loop designs |
-| `patterns/` | SDD patterns and reusable practices |
-| `experiments/` | Small experiments and iteration notes |
+| `src/notes/` | Theory, insights, evolving understanding |
+| `src/specs/` | Behavior specifications, prompt contracts |
+| `src/evals/` | Evaluation strategies, eval loop designs |
+| `src/patterns/` | SDD patterns and reusable practices |
+| `src/experiments/` | Small experiments and iteration notes |
 | `docs/` | Meta-documentation |
 
 Files use **`NN_<slug>.md`** (two-digit prefix, kebab-case). Never `00_`.
 
+**SSOT write-up:** `docs/01_repository-structure.md`. **Project habit:** `docs/02_project-playbook.md`.
 **Authority:** `.cursor/rules/09_week-companion-architecture.mdc`. **Naming:**
 `.cursor/rules/07_file-naming-conventions.mdc`.
 
@@ -41,7 +44,8 @@ consistent terminology and links.
 - **Voice**: first-person learning journey in notes; avoid lecturer or “course” framing (see copilot
   instructions).
 - **Zero-copy**: original synthesis in public folders; cite definitions when needed.
-- **`reference-material/`** (if present): read-only staging; do not surface it in public-facing docs per
+- **`source-material/`** (gitignored) and **`reference-material/`** (if present): read-only staging; do **not**
+  mention either path in `README.md`, any `src/**` topic Markdown, or `docs/**/*.md`. Policy:
   `.cursor/rules/06_source_material_rules.mdc`.
 
 ---

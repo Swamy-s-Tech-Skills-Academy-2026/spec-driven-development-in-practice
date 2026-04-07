@@ -18,19 +18,22 @@ explicitly asks. Preserve the **Scope** block in `README.md`.
 
 ## Repository structure
 
-Content is organized into topic folders created **on demand** — no pre-scaffolding:
+All **topic** folders live under **`src/`**. **`docs/`** sits at the repository root. Created **on
+demand** — no pre-scaffolding. **Human-readable layout** (same table as
+`.cursor/rules/09_week-companion-architecture.mdc`):
 
 | Folder | Purpose |
 |--------|---------|
-| `specs/` | Behavior specifications and prompt contracts |
-| `evals/` | Evaluation strategies and eval loop designs |
-| `patterns/` | SDD patterns and reusable practices |
-| `experiments/` | Small experiments and iteration notes |
-| `notes/` | Theory, insights, and evolving understanding |
+| `src/notes/` | Theory, insights, and evolving understanding |
+| `src/specs/` | Behavior specifications and prompt contracts |
+| `src/evals/` | Evaluation strategies and eval loop designs |
+| `src/patterns/` | SDD patterns and reusable practices |
+| `src/experiments/` | Small experiments and iteration notes |
 | `docs/` | Meta documentation and repository guides |
 
-Topic files within each folder use kebab-case numbered names (`01_`, `02_`, …).
+Topic files use **`NN_<slug>.md`** (two-digit prefix, kebab-case). Never `00_`.
 
+**SSOT write-up**: `docs/01_repository-structure.md`
 **Governance**: `.cursor/rules/09_week-companion-architecture.mdc`
 **Naming**: `.cursor/rules/07_file-naming-conventions.mdc`
 
@@ -43,6 +46,9 @@ complements `CLAUDE.md`, rules, and MCP: **`docs/agent-skills.md`**.
 ## Key rules
 
 - **Zero-copy**: All public content must be original synthesis. No copy-paste from reference materials or external sources.
+- **Staging hygiene**: Do **not** mention `source-material/` (or `reference-material/`) in `README.md`,
+  any `src/**` topic Markdown, or `docs/**/*.md`. Synthesize into topic notes; full rule:
+  `.cursor/rules/06_source_material_rules.mdc`.
 - **Voice**: First-person learning journey (Swamy's notes). Avoid instructor or "course" framing in reading notes.
 - **Docs style**: Use `##` for main topics, `###` for subtopics. Comments in any incidental code explain *why* not *how*.
 
@@ -55,7 +61,7 @@ No Python environment required — this is a Markdown-only learning repository.
 Aligned with `.github/workflows/ci-documentation.yml`. Full commands: `.github/skills/ci-checks/SKILL.md`.
 
 ```bash
-npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" "notes/**/*.md" "specs/**/*.md" "evals/**/*.md" "patterns/**/*.md" "experiments/**/*.md"
+npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" "src/notes/**/*.md" "src/specs/**/*.md" "src/evals/**/*.md" "src/patterns/**/*.md" "src/experiments/**/*.md"
 ```
 
 Optional link check:
@@ -75,6 +81,9 @@ docker run --rm -v "${PWD}:/workspace" -w /workspace lycheeverse/lychee:latest \
 | `.cursor/skills.md` | Short habits and CI expectations |
 | `.github/skills/` | Bundled agent skills (canonical); mirrored at `.cursor/skills/` |
 | `docs/agent-skills.md` | SKILL.md pattern, progressive disclosure, skills mirror |
+| `docs/01_repository-structure.md` | Topic folders, naming, on-demand creation (structural SSOT) |
+| `docs/02_project-playbook.md` | Step-by-step habit for spec-first, predictable project reproduction |
+| `.cursor/rules/06_source_material_rules.mdc` | Staging folders; no `source-material/` in public learning Markdown |
 | `.cursor/rules/09_week-companion-architecture.mdc` | Topic unit architecture, on-demand creation, naming contract |
 | `.github/prompts/task-prompt.md` | Structured audit template |
 | `.github/prompts/smart-prompt-framework-guide.md` | S.M.A.R.T. prompt framework |

@@ -59,13 +59,16 @@ This repository is strictly for:
 
 ## Repository structure (evolving)
 
+All **topic** folders live under **`src/`**; **`docs/`** stays at the repository root (see
+`docs/01_repository-structure.md`).
+
 ```text
-/specs           # Behavior specifications and prompt contracts
-/evals           # Evaluation strategies and eval loop designs
-/patterns        # SDD patterns and practices
-/experiments     # Small experiments and iterations
-/notes           # Theory, insights, and evolving understanding
-/docs            # Meta-documentation and guides
+/src/notes           # Theory, insights, and evolving understanding
+/src/specs           # Behavior specifications and prompt contracts
+/src/evals           # Evaluation strategies and eval loop designs
+/src/patterns        # SDD patterns and practices
+/src/experiments     # Small experiments and iterations
+/docs                # Meta-documentation and guides
 ```
 
 ---
