@@ -52,6 +52,25 @@ The habit I'm building is:
 Then the next reader sees **why** the throttle exists without spelunking. The bug fix becomes a **spec
 repair** plus code, not only a code patch.
 
+## Worked example (fictional): Acme Tasks
+
+**Setup:** I imagine a small SaaS called **Acme Tasks** (made up; any resemblance to real products is
+accidental).
+
+**Bug:** QA says a user can hit "Forgot password" dozens of times in a minute and flood their inbox.
+
+**Code-first reflex I am trying to unlearn:** I slap a counter in the handler, open a PR, close the
+ticket. The wiki still says nothing about rate limits. Six months later someone refactors the route,
+drops the counter by mistake, and **no test shouts** because behavior was never written down as intent.
+
+**Intent-first path:** I add plain-language rules to the **spec** first: how many emails per window, what
+the user sees when limited (still a generic success to avoid account enumeration), what gets logged. I
+add a **check**—even one integration or contract test—that fails until the code matches. From then on,
+**code is wrong if it drifts**; the spec is the anchor unless we consciously change product policy.
+
+The spec-shaped bullets and gate order for this same slice live in
+[`04_specs-as-contract-for-ai-agents.md`](./04_specs-as-contract-for-ai-agents.md).
+
 ## Longer-term reasons I care
 
 - The **what** often outlives the **how**; clear intent should survive stack churn.

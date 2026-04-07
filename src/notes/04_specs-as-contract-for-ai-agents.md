@@ -39,6 +39,47 @@ or **integration seams**, I'm effectively asking the agent to **invent** them—
 I do not need a novel every time; I need **no silent blanks** on dimensions that matter for *this*
 change.
 
+## Worked example (fictional): Acme Tasks (same slice as note 02)
+
+The **story** (code-first vs intent-first) is in
+[`02_intent-before-code-power-inversion.md`](./02_intent-before-code-power-inversion.md). Here I write what
+I'd actually put in a spec file for a real project—still fictional, still mine.
+
+### Scope
+
+- **In:** Self-service "forgot password" email for **known workflow only** (user submits email, system
+  sends reset link).
+- **Out:** Admin-initiated resets, magic-link login, CAPTCHA (unless I add another spec slice).
+
+### Behavior sketch (I'd file under `src/specs/` when building for real)
+
+- User submits email on Forgot Password. Response is **always** the same success message (no hint whether
+  the mailbox exists).
+- Per **normalized email**, at most **3** reset emails per **15-minute** rolling window (I would pin the
+  exact keying—email-only vs email+IP—in review; until then I tag **UNCERTAIN: rate-limit key**).
+- When throttled, user still sees success; system emits an internal event or metric `reset_throttled` for
+  monitoring.
+- Email contains a **single-use** token with **20-minute** TTL; token invalid after successful password
+  change.
+
+### Dimensions filled for this slice
+
+| Dimension | What I record |
+|-----------|---------------|
+| Security | No account enumeration via messaging; throttle abuse; single-use token. |
+| Data | Token storage, hashing, invalidation rules—one paragraph, not a novel. |
+| Failure | Email provider outage: **UNCERTAIN** retry vs queue until I decide with ops. |
+| Non-functional | Protect shared SMTP reputation; avoid leaking internal errors to the user. |
+
+### Gates and eval hook
+
+- **Gates:** Spec (product + eng agree on limits and UX) → short technical plan (where throttle lives) →
+  tasks (handler, mailer integration, test) → implement or generate **after** approval.
+- **Eval / test:** A test that simulates four rapid submissions and asserts the mailer was invoked at most
+  three times (or equivalent contract on the outbound email boundary).
+
+This is the level of concreteness I want **before** I ask an agent to "just implement forgot password."
+
 ## Ambiguity as debt
 
 Models tend to **complete** the picture instead of pausing. I'm training myself to **surface unknowns on
@@ -50,26 +91,41 @@ be theater.
 
 ## Gates I'm considering
 
-Fast wrong code is still wrong code. I want **human checkpoints** where leverage is high:
+Fast wrong code is still wrong code. I want **human checkpoints** where leverage is high. One concrete
+shape I borrow (including common slash-style steps in assistants) is **five core phases**, then **verify**:
 
-1. **Spec** — Does the behavior story match what we want?
-2. **Technical plan** — Approach, risks, touchpoints.
-3. **Tasks** — Sized so each piece is verifiable.
-4. **Implementation** — After the above pass, not instead of them.
+1. **Constitution** (`/constitution`) — Project-wide principles: style, stack, testing norms so everything
+   stays consistent.
+2. **Specify** (`/specify`) — **What** to build; output like **`spec.md`**: user stories and functional
+   requirements, not implementation yet.
+3. **Plan** (`/plan`) — Technical architecture; output like **`plan.md`**: data models, service seams,
+   library choices.
+4. **Tasks** (`/tasks`) — Decompose the plan; output like **`tasks.md`**: small, **isolated, testable**
+   units.
+5. **Implement** (`/implement`) — Execute tasks inside those constraints; usually followed by automated
+   checks and review.
+6. **Verify** — Prove behavior against `spec.md` (and tests), not only that code merged.
+
+Slash names are **mnemonics**; the important part is the **order** and the **artifacts**.
 
 Each gate is a chance to catch **direction** errors before they multiply. Skipping gates is a conscious
 risk call, not an accident.
 
 ```mermaid
 flowchart TD
-  G1[Gate: spec approved] --> G2[Gate: plan approved]
-  G2 --> G3[Gate: tasks approved]
-  G3 --> I[Implement / generate]
-  I --> V[Verify vs spec]
-  style G1 fill:#ffd966,stroke:#333,color:#000
-  style G2 fill:#dae8fc,stroke:#333,color:#000
-  style G3 fill:#dae8fc,stroke:#333,color:#000
-  style V fill:#d5e8d4,stroke:#333,color:#000
+  P1["1 Constitution<br/>/constitution<br/>Principles, stack, test norms"]
+  P2["2 Specify<br/>/specify → spec.md<br/>What (stories, functional reqs)"]
+  P3["3 Plan<br/>/plan → plan.md<br/>Architecture, models, interfaces"]
+  P4["4 Tasks<br/>/tasks → tasks.md<br/>Isolated, testable units"]
+  P5["5 Implement<br/>/implement<br/>Agent or human, within constraints"]
+  P6["6 Verify<br/>Tests + review vs spec.md"]
+  P1 --> P2 --> P3 --> P4 --> P5 --> P6
+  style P1 fill:#ffd966,stroke:#333,color:#000
+  style P2 fill:#dae8fc,stroke:#333,color:#000
+  style P3 fill:#dae8fc,stroke:#333,color:#000
+  style P4 fill:#dae8fc,stroke:#333,color:#000
+  style P5 fill:#d5e8d4,stroke:#333,color:#000
+  style P6 fill:#fff2cc,stroke:#333,color:#000
 ```
 
 ## Project constitution
