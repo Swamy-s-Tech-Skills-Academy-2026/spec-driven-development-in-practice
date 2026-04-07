@@ -21,7 +21,7 @@ globs: *
 | `src/evals/` | `01_eval-loop-design.md`, `02_eval-metrics.md` |
 | `src/patterns/` | `01_spec-first-pattern.md`, `02_prompt-versioning.md` |
 | `src/experiments/` | `01_first-spec-experiment.md` |
-| `docs/` | `01_repository-structure.md`, `agent-skills.md` |
+| `docs/` | `01_repository-structure.md`, `02_project-playbook.md`, `agent-skills.md` |
 
 ## Images & figures
 

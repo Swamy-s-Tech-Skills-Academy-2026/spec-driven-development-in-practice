@@ -82,6 +82,7 @@ docker run --rm -v "${PWD}:/workspace" -w /workspace lycheeverse/lychee:latest \
 | `.github/skills/` | Bundled agent skills (canonical); mirrored at `.cursor/skills/` |
 | `docs/agent-skills.md` | SKILL.md pattern, progressive disclosure, skills mirror |
 | `docs/01_repository-structure.md` | Topic folders, naming, on-demand creation (structural SSOT) |
+| `docs/02_project-playbook.md` | Step-by-step habit for spec-first, predictable project reproduction |
 | `.cursor/rules/06_source_material_rules.mdc` | Staging folders; no `source-material/` in public learning Markdown |
 | `.cursor/rules/09_week-companion-architecture.mdc` | Topic unit architecture, on-demand creation, naming contract |
 | `.github/prompts/task-prompt.md` | Structured audit template |

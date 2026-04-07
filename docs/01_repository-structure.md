@@ -44,3 +44,4 @@ Full governance and extension rules:
 ## Related meta docs
 
 - [`agent-skills.md`](./agent-skills.md) — bundled assistant skills and mirror layout
+- [`02_project-playbook.md`](./02_project-playbook.md) — repeatable steps from this repo to future projects

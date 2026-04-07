@@ -29,7 +29,7 @@ This rule governs how learning content is organized. For naming patterns, see [0
 | `src/evals/` | Evaluation strategies, eval loop designs | `01_eval-loop-design.md` |
 | `src/patterns/` | SDD patterns and reusable practices | `01_spec-first-pattern.md` |
 | `src/experiments/` | Small experiments and iteration notes | `01_first-spec-experiment.md` |
-| `docs/` | Meta-documentation and guides (repository root) | `01_repository-structure.md` |
+| `docs/` | Meta-documentation and guides (repository root) | `01_repository-structure.md`, `02_project-playbook.md` |
 
 ---
 

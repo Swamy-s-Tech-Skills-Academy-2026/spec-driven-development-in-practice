@@ -18,6 +18,7 @@
 | `.cursor/skills.md` | Short Cursor habits; mirrors this file’s scope and CI expectations |
 | `docs/agent-skills.md` | How `SKILL.md` bundles relate to rules and this document |
 | `docs/01_repository-structure.md` | Structural single source of truth (topic folders, naming) |
+| `docs/02_project-playbook.md` | Repeatable spec-first steps for future projects |
 
 **Canonical copy for Copilot:** this file (`.github/copilot-instructions.md`). When any of the above
 changes, update the others in the same pass so assistants stay consistent.

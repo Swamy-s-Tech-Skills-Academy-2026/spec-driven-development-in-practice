@@ -30,8 +30,8 @@ work on that topic begins:
 
 Files use **`NN_<slug>.md`** (two-digit prefix, kebab-case). Never `00_`.
 
-**SSOT write-up:** `docs/01_repository-structure.md`. **Authority:**
-`.cursor/rules/09_week-companion-architecture.mdc`. **Naming:**
+**SSOT write-up:** `docs/01_repository-structure.md`. **Project habit:** `docs/02_project-playbook.md`.
+**Authority:** `.cursor/rules/09_week-companion-architecture.mdc`. **Naming:**
 `.cursor/rules/07_file-naming-conventions.mdc`.
 
 When I edit one file in a topic line of thought, I check sibling notes in the same folder for
