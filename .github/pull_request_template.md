@@ -7,7 +7,7 @@ A clear and concise description of what this PR does.
 ## Type of change
 
 - [ ] Bug fix (non-breaking change which fixes an issue)
-- [ ] New content in topic folders (`notes/`, `specs/`, `evals/`, `patterns/`, `experiments/`)
+- [ ] New content in topic folders (`src/notes/`, `specs/`, `evals/`, `patterns/`, `experiments/`)
 - [ ] Documentation update (`README.md`, `docs/`, meta-docs)
 - [ ] Formatting or lint-only (no meaning change)
 - [ ] Refactor (move/rename without changing substance)
@@ -16,7 +16,7 @@ A clear and concise description of what this PR does.
 
 ## Content type
 
-- [ ] `notes/`
+- [ ] `src/notes/`
 - [ ] `specs/`
 - [ ] `evals/`
 - [ ] `patterns/`

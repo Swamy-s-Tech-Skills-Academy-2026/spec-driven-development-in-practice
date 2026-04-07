@@ -21,7 +21,7 @@ T — Task-oriented constraints (Markdown-only repo, zero-copy, naming)
 When creating prompts for this repo, consider:
 
 - **Pattern**: instruction-following, role-based, chain-of-thought, or evaluation-style task?
-- **Location**: which topic folder (`specs/`, `evals/`, `patterns/`, `notes/`, `experiments/`, `docs/`)?
+- **Location**: which topic folder (`specs/`, `evals/`, `patterns/`, `src/notes/`, `experiments/`, `docs/`)?
 - **Topic units**: files are **`NN_<slug>.md`**, folders created **on demand** — see `.cursor/rules/09_week-companion-architecture.mdc`.
 - **Reusability**: can the prompt template apply to multiple future topic files without assuming fixed week numbers or code paths?
 
@@ -102,7 +102,7 @@ CONSTRAINTS:
 
 - “Add `evals/01_regression-suite-outline.md` describing three metrics and when to rerun the suite.”
 - “Tighten the acceptance criteria in `specs/01_prompt-contract-template.md` so each bullet is testable.”
-- “Fix broken relative links between `notes/01_sdd-foundations.md` and `patterns/01_spec-first-pattern.md`.”
+- “Fix broken relative links between `src/notes/01_sdd-foundations.md` and `patterns/01_spec-first-pattern.md`.”
 
 ### Weak (vague)
 

@@ -6,7 +6,7 @@ You are working with **spec-driven-development-in-practice**, Swamy PKV’s **pe
 
 **Repository structure (topic folders, on demand):**
 
-- `notes/` — theory, insights, evolving understanding
+- `src/notes/` — theory, insights, evolving understanding
 - `specs/` — behavior specifications, prompt contracts
 - `evals/` — evaluation strategies, eval loop designs
 - `patterns/` — SDD patterns and reusable practices
