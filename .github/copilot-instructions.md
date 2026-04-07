@@ -1,7 +1,7 @@
 # GitHub Copilot Instructions for Spec-Driven Development in Practice
 
-**Version**: 1.1
-**Last Updated**: April 7, 2026
+**Version**: 1.2
+**Last Updated**: April 8, 2026
 **Repository**: `spec-driven-development-in-practice`
 **Context**: AI Engineering — Personal learning exploration
 
@@ -85,6 +85,14 @@ Files within each folder use two-digit kebab-case numbered names: `01_spec-first
 - All notes must be original synthesis of ideas and learnings.
 - No direct copying from books, papers, or web sources without citation.
 - Content must demonstrate genuine understanding in Swamy's own words.
+
+### Staging folders (not in public learning docs)
+
+- Do **not** mention **`source-material/`** or **`reference-material/`** in `README.md`, topic folders
+  (`notes/`, `specs/`, `evals/`, `patterns/`, `experiments/`), or **`docs/**/*.md`**.
+- Synthesize into topic Markdown; assistants may name these paths only in agent config (this file,
+  `CLAUDE.md`, `.cursor/**`, `.github/skills/**`) to state policy — see
+  `.cursor/rules/06_source_material_rules.mdc`.
 
 ### Voice and Tone
 

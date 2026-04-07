@@ -25,3 +25,5 @@ globs: *.md
 - `README.md` must match actual repo content.
 - Notes must accurately reflect SDD concepts and Swamy's current understanding.
 - Comments in any incidental code explain the *why*, not just the *how*.
+- No references to **`source-material/`** or **`reference-material/`** in `README.md`, topic folders, or
+  `docs/**/*.md` (see rule `06`).

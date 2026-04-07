@@ -32,5 +32,6 @@ When adding or changing a topic file:
 3. No duplicate home for the same concept across folders.
 4. Relative internal links resolve.
 5. Zero-copy and voice rules hold (`.cursor/rules/01_educational-content-rules.mdc`).
+6. No mention of `source-material/` or `reference-material/` in topic Markdown (rule `06`).
 
 **Authority**: `.cursor/rules/09_week-companion-architecture.mdc`.

@@ -43,7 +43,8 @@ consistent terminology and links.
 - **Voice**: first-person learning journey in notes; avoid lecturer or “course” framing (see copilot
   instructions).
 - **Zero-copy**: original synthesis in public folders; cite definitions when needed.
-- **`reference-material/`** (if present): read-only staging; do not surface it in public-facing docs per
+- **`source-material/`** (gitignored) and **`reference-material/`** (if present): read-only staging; do **not**
+  mention either path in `README.md`, topic folders, or `docs/**/*.md`. Policy:
   `.cursor/rules/06_source_material_rules.mdc`.
 
 ---

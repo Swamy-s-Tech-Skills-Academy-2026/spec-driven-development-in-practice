@@ -16,7 +16,7 @@ This repository is **Markdown-only**. There is no OpenAPI or web API surface to 
 | File naming | `.cursor/rules/07_file-naming-conventions.mdc` | `00_` prefix; missing or non-kebab slug |
 | On-demand rule | Rule `09` | Stub files for topics not yet started |
 | Voice / framing | `.github/copilot-instructions.md` | Instructor tone; third-party audience framing |
-| Internal-only material | `.cursor/rules/06_source_material_rules.mdc` | Mentioning read-only staging folders in public docs |
+| Internal-only material | `.cursor/rules/06_source_material_rules.mdc` | Naming `source-material/` or `reference-material/` in `README.md`, topic folders, or `docs/**/*.md` |
 
 ## Paths to spot-check
 

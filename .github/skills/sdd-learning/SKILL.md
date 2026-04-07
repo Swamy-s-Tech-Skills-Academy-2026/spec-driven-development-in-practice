@@ -19,6 +19,8 @@ description: Work on Spec-Driven Development in Practice — notes, specs, evals
 - **Voice**: first-person learning journey; avoid instructor or course framing (see
   `.github/copilot-instructions.md`).
 - **Zero-copy**: original synthesis; cite sources when using specific definitions.
+- **Staging**: do not mention `source-material/` or `reference-material/` in `README.md`, topic folders, or
+  `docs/**/*.md` (rule `06`).
 
 ## Topic areas (SDD)
 

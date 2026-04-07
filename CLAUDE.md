@@ -45,6 +45,8 @@ complements `CLAUDE.md`, rules, and MCP: **`docs/agent-skills.md`**.
 ## Key rules
 
 - **Zero-copy**: All public content must be original synthesis. No copy-paste from reference materials or external sources.
+- **Staging hygiene**: Do **not** mention `source-material/` (or `reference-material/`) in `README.md`, topic
+  folders, or `docs/**/*.md`. Synthesize into topic notes; full rule: `.cursor/rules/06_source_material_rules.mdc`.
 - **Voice**: First-person learning journey (Swamy's notes). Avoid instructor or "course" framing in reading notes.
 - **Docs style**: Use `##` for main topics, `###` for subtopics. Comments in any incidental code explain *why* not *how*.
 
@@ -78,6 +80,7 @@ docker run --rm -v "${PWD}:/workspace" -w /workspace lycheeverse/lychee:latest \
 | `.github/skills/` | Bundled agent skills (canonical); mirrored at `.cursor/skills/` |
 | `docs/agent-skills.md` | SKILL.md pattern, progressive disclosure, skills mirror |
 | `docs/01_repository-structure.md` | Topic folders, naming, on-demand creation (structural SSOT) |
+| `.cursor/rules/06_source_material_rules.mdc` | Staging folders; no `source-material/` in public learning Markdown |
 | `.cursor/rules/09_week-companion-architecture.mdc` | Topic unit architecture, on-demand creation, naming contract |
 | `.github/prompts/task-prompt.md` | Structured audit template |
 | `.github/prompts/smart-prompt-framework-guide.md` | S.M.A.R.T. prompt framework |

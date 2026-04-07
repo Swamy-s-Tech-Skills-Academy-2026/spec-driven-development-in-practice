@@ -2,23 +2,46 @@
 description: Rules for handling any reference or archival material
 globs: *
 ---
-# Reference Material Rules
+# Reference and staging material
 
-If any `reference-material/` or internal staging folder exists in this repository:
+## Folders
 
-- **Read-Only**: Never modify, overwrite, or delete files in it.
-- **Internal only**: Do not mention or reference it in public-facing documentation.
-- **No copy-paste**: Always synthesize content from reference material into original notes in the topic folders.
+- **`source-material/`** — Local, **gitignored** staging for raw inputs. It may exist only on disk; it is
+  not part of the published learning corpus.
+- **`reference-material/`** — If present, **read-only** internal staging (same hygiene as below).
 
-## Zero-Copy Policy
+## Public learning content (do not name staging)
 
-### Good Synthesis (Accepted)
+Do **not** mention or reference **`source-material/`** (or `reference-material/`) in:
+
+- `README.md`
+- Topic folders: `notes/`, `specs/`, `evals/`, `patterns/`, `experiments/`
+- `docs/**/*.md` (meta and guides that ship with the repo narrative)
+
+Synthesize into topic Markdown with zero-copy; readers should see ideas, not pointers to staging trees.
+
+## Where the path *may* appear
+
+Policy and tooling may name `source-material/` only where assistants are configured, for example:
+`CLAUDE.md`, `.cursor/rules/*.mdc`, `.cursor/skills.md`, `.github/copilot-instructions.md`, and
+`.github/skills/**` — and then **only** to state this rule, not to surface staging content verbatim.
+
+## Staging hygiene
+
+If a staging folder exists in the workspace:
+
+- **Read-only**: Do not modify, overwrite, or delete files in it unless Swamy explicitly asks.
+- **No copy-paste into public learning content**: Always synthesize into original notes in topic folders.
+
+## Zero-copy policy
+
+### Good synthesis (accepted)
 
 - Demonstrates understanding in your own words
 - Uses different vocabulary
 - Shows original thinking and interpretation
 
-### Bad Synthesis (Rejected)
+### Bad synthesis (rejected)
 
 - Word-for-word copying
 - Minor rephrasing without understanding
